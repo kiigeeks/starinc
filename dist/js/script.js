@@ -494,3 +494,23 @@ searchCenter?.addEventListener('input', () => {
       }
     })
 })
+
+// playlist video
+const videoPlayer = document.getElementById('videoPlayer')
+const videoSources = document.querySelectorAll('.video-player')
+
+let currentSourceIndex = 0
+
+videoPlayer?.addEventListener('ended', function() {
+    if (currentSourceIndex < videoSources.length - 1) {
+        currentSourceIndex++;
+        videoPlayer.src = videoSources[currentSourceIndex].getAttribute('src');
+        videoPlayer.load();
+        videoPlayer.play();
+    } else {
+        currentSourceIndex = 0;
+        videoPlayer.src = videoSources[currentSourceIndex].getAttribute('src');
+        videoPlayer.load();
+        videoPlayer.play();
+    }
+});
