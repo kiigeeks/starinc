@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="./dist/output.css" rel="stylesheet">
+        <link rel="icon" href="./dist/images/icon/Starinc-Logomark.svg" />
+        <meta name="description" content="Starinc Official" />
+        <title>Starinc</title>
+    </head>
+    <body>
+        <!-- navbar start -->
+        <nav class="hidden h-14 w-full flex justify-center items-center absolute top-0 left-0 z-10 animate__animated animate__fadeInDown">
+            <div class="w-full">
+                <div class="flex justify-between items-center relative">
+                    <div class="w-fit pl-5 lg:pl-9 flex justify-center items-center gap-5">
+                        <a href="index.html" rel="noopener noreferrer" class="flex">
+                            <img src="./dist/images/logo/starinc-1.png" loading="lazy" alt="logo starinc text" class="h-5 w-auto">
+                        </a>
+                        <div id="nav-menu" class="hidden lg:block lg:static w-screen lg:w-full bg-white lg:bg-transparent bg-opacity-90 lg:bg-opacity-0 backdrop-blur-sm lg:backdrop-blur-0 lg:max-w-full shadow-lg lg:shadow-none            rounded-b-lg absolute top-[41px] right-0 py-2      lg:rounded-none">
+                            <ul class="flex flex-col lg:flex-row items-end lg:items-center gap-3 lg:gap-0 text-sm lg:text-xs font-medium uppercase py-5">
+                                <li class="group"><a href="about.html" rel="noopener noreferrer" class="mx-8 py-2">About</a></li>
+                                <li class="group"><a href="contact.html" rel="noopener noreferrer" class="mx-8 py-2">Contact</a></li>
+                                <li class="group"><a href="center.html" rel="noopener noreferrer" class="mx-8 py-2">Find Center</a></li>
+                                <li class="group"><a href="starpreneur.html" rel="noopener noreferrer" class="mx-8 py-2">Starpreneur</a></li>
+                                <li class="group"><a href="cart.html" rel="noopener noreferrer" class="lg:hidden mx-8 py-2">Cart (0)</a></li>
+                            
+                                <div class="lg:hidden w-full my-3 px-5">
+                                    <hr class="h-[2px] bg-pinkThird border-0 z-40 self-center">
+                                </div>
+
+                                <!-- jika belum login -->
+                                <a href="login.html" rel="noopener noreferrer" class="lg:hidden bg-gradient-primary rounded-3xl mx-8 p-[1px] text-sm text-white uppercase cursor-pointer">
+                                    <div class="h-full w-full bg-white rounded-3xl px-3 py-1">
+                                        <span class="text-gradient-primary">Login</span>
+                                    </div>
+                                </a>
+
+                                <!-- sudah login -->
+                                <!-- <li class="group"><a href="#" rel="noopener noreferrer" class="lg:hidden mx-8 py-2">Hi, Username</a></li>
+                                <li class="group"><a href="dashboard.html" rel="noopener noreferrer" class="lg:hidden mx-8 py-2">Riwayat Transaksi</a></li>
+                                <li class="group"><a href="login.html" rel="noopener noreferrer" class="lg:hidden mx-8 py-2">Logout</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pr-5 lg:pr-9 flex justify-center items-center gap-5 lg:gap-2">
+                        <!-- muncul kecuali pada halaman shop -->
+                        <a href="shop.html" rel="noopener noreferrer" class="bg-gradient-primary rounded-3xl mx-1 lg:mx-3 px-3 py-1 text-xs lg:text-sm text-white uppercase cursor-pointer">
+                            Shop Now
+                        </a>
+
+                        <!-- muncul jika dihalaman shop -->
+                        <!-- <button class="h-7 w-7 bg-gradient-primary rounded-full p-[3px]" onclick="showModal()">
+                            <img src="./dist/images/icon/Search.svg" alt="icon search" loading="lazy" class="w-full h-full">
+                        </button> -->
+
+                        <!-- cart icon -->
+                        <a href="cart.html" rel="noopener noreferrer" class="hidden md:block relative">
+                            <div class="h-4 w-4 bg-yellowPrimary rounded-full flex justify-center items-center text-white text-xxs truncate p-[10px] absolute -top-[10px] -right-3">
+                                28
+                            </div>
+                            <img src="./dist/images/icon/cart.svg" alt="icon cart" loading="lazy" class="w-7 h-7 cursor-pointer">
+                        </a>
+                        <div class="hidden lg:block h-full w-7">
+                            <hr class="h-[2px] w-full bg-pinkThird rotate-90 border-0 relative">
+                        </div>
+
+                        <!-- belum login -->
+                        <a href="login.html" rel="noopener noreferrer" class="hidden lg:block bg-gradient-primary rounded-3xl mx-1 p-[1px] text-sm text-white uppercase cursor-pointer">
+                            <div class="h-full w-full bg-white rounded-3xl px-3 py-1">
+                                <span class="text-gradient-primary">Login</span>
+                            </div>
+                        </a>
+
+                        <!-- sudah login -->
+                        <!-- <button class="hidden lg:block h-8 w-8 bg-gradient-primary rounded-full p-1 cursor-pointer">
+                            <img src="./dist/images/icon/User.svg" alt="" class="h-full w-full object-cover rounded-full">
+                        </button> -->
+
+                        <!-- menu login -->
+                        <div id="menu-profile" class="hidden bg-white rounded-2xl shadow-2xl flex flex-col text-end gap-1 py-3 px-5 absolute top-[70px] right-5">
+                            <div class="flex flex-row justify-center items-center gap-2">
+                                <div class="h-9 w-9 bg-transparent">
+                                    <img src="./dist/images/icon/Starinc-Orange.svg" loading="lazy" alt="icon starinc" class="h-full h-full">
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-sm font-semibold">Nadia Julianan Sinaga</span>
+                                    <span class="text-sm font-light text-gray-600">SC2308000001</span>
+                                </div>
+                            </div>
+                            <hr class="w-[95%] self-center mt-3 mb-3">
+                            <a href="dashboard.html" rel="noopener noreferrer" class="text-sm font-light">Dashboard</a>
+                            <a href="dashboard.html" rel="noopener noreferrer" class="text-sm font-light">Riwayat Transaksi</a>
+                            <a href="login.html" rel="noopener noreferrer" class="text-sm mt-3">Logout</a>
+                        </div>
+                        
+                        <!-- hamburger icon -->
+                        <button id="hamburger" name="hamburger" type="button" class="block lg:hidden">
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar end -->
+
+        <!-- main start -->
+        <main id="home">
+            <!-- section center start -->
+            <section class="mt-10 lg:mt-20 mb-20">
+                <div class="w-full flex flex-col justify-center items-center gap-5 relative overflow-hidden px-0">
+                    <span class="text-2xl lg:text-5xl text-center font-medium tracking-wide lg:tracking-[1.6px] uppercase px-2" data-aos="fade-up">
+                        Official STARINC Center
+                    </span>
+                    <p class="w-full lg:w-[50%] text-center text-sm lg:text-base px-5" data-aos="fade-up" data-aos-delay="50">
+                        Buy STARINC products through official Center listed in our website
+                    </p>
+                    <div class="w-full lg:w-11/12 flex flex-col justify-center items-center gap-8 lg:gap-3 mt-5 lg:mt-7" data-aos="fade-up" data-aos-delay="100">
+                        <!-- search -->
+                        <div class="h-9 w-11/12 md:w-3/4 lg:w-1/2 bg-gradient-primary rounded-full p-[1px]">
+                            <div class="h-full w-full bg-white rounded-full flex justify-between items-center p-[1px]">
+                                <div class="w-[95%] px-3">
+                                    <input type="text" name="keyword" id="keyword-center" placeholder="Find by Name, Seller ID, City, Province" class="w-full text-sm focus:outline-none focus:ring-0">
+                                </div>
+                                <div class="h-full w-[10%] flex justify-center bg-gradient-primary rounded-e-full">
+                                    <button class="h-full w-9 flex justify-center items-center p-[1px]">
+                                        <img src="./dist/images/icon/Search.svg" alt="" class="h-5 lg:h-7 w-5 lg:w-7">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:min-h-[60vh] w-full flex flex-row flex-wrap justify-center items-start gap-4 md:gap-5 mt-0 lg:mt-5 py-3">
+                            <!-- card center -->
+                            <div class="w-[90%] md:w-[45%] lg:w-[30%] bg-gradient-primary rounded-3xl p-[2px] card-center">
+                                <div class="h-full w-full bg-white rounded-3xl flex flex-col gap-3 px-4 lg:px-6 pt-5 pb-2 ">
+                                    <h1 class="text-sm lg:text-base font-semibold uppercase">
+                                        Star Center Official Surabaya
+                                    </h1>
+                                    <div class="w-full text-xs lg:text-sm flex flex-row gap-2">
+                                        <div class="flex flex-col gap-2">
+                                            <h1>Seller ID</h1>
+                                            <h1>Seller Status</h1>
+                                            <h1>Alamat</h1>
+                                        </div>
+                                        <div class="flex flex-col gap-2">
+                                            <h1>:</h1>
+                                            <h1>:</h1>
+                                            <h1>:</h1>
+                                        </div>
+                                        <div class="w-3/5 flex flex-col gap-2">
+                                            <span>SC2308000001</span>
+                                            <span>Center</span>
+                                            <span>Gubeng, Surabaya, Jawa Timur - 60284</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-row justify-end gap-2 lg:gap-3">
+                                        <a href="" rel="noopener noreferrer" class="w-7 h-7">
+                                            <img src="./dist/images/icon/WA.svg" loading="lazy" alt="icon wa" class="w-full h-full">
+                                        </a>
+                                        <a href="" rel="noopener noreferrer" class="w-7 h-7">
+                                            <img src="./dist/images/icon/IG.svg" loading="lazy" alt="icon ig" class="w-full h-full">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card center -->
+                            <div class="w-[90%] md:w-[45%] lg:w-[30%] bg-gradient-primary rounded-3xl p-[2px] card-center">
+                                <div class="h-full w-full bg-white rounded-3xl flex flex-col gap-3 px-4 lg:px-6 pt-5 pb-2 ">
+                                    <h1 class="text-sm lg:text-base font-semibold uppercase">
+                                        Star Center Official Semarang
+                                    </h1>
+                                    <div class="w-full text-xs lg:text-sm flex flex-row gap-2">
+                                        <div class="flex flex-col gap-2">
+                                            <h1>Seller ID</h1>
+                                            <h1>Seller Status</h1>
+                                            <h1>Alamat</h1>
+                                        </div>
+                                        <div class="flex flex-col gap-2">
+                                            <h1>:</h1>
+                                            <h1>:</h1>
+                                            <h1>:</h1>
+                                        </div>
+                                        <div class="w-3/5 flex flex-col gap-2">
+                                            <span>SC2308000002</span>
+                                            <span>Center</span>
+                                            <span>Kota Tua, Semarang, Jawa Tengah - 40214</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-row justify-end gap-2 lg:gap-3">
+                                        <a href="" rel="noopener noreferrer" class="w-7 h-7">
+                                            <img src="./dist/images/icon/WA.svg" loading="lazy" alt="icon wa" class="w-full h-full">
+                                        </a>
+                                        <a href="" rel="noopener noreferrer" class="w-7 h-7">
+                                            <img src="./dist/images/icon/IG.svg" loading="lazy" alt="icon ig" class="w-full h-full">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card center -->
+                            <div class="w-[90%] md:w-[45%] lg:w-[30%] bg-gradient-primary rounded-3xl p-[2px] card-center">
+                                <div class="h-full w-full bg-white rounded-3xl flex flex-col gap-3 px-4 lg:px-6 pt-5 pb-2 ">
+                                    <h1 class="text-sm lg:text-base font-semibold uppercase">
+                                        Star Center Official Jakarta
+                                    </h1>
+                                    <div class="w-full text-xs lg:text-sm flex flex-row gap-2">
+                                        <div class="flex flex-col gap-2">
+                                            <h1>Seller ID</h1>
+                                            <h1>Seller Status</h1>
+                                            <h1>Alamat</h1>
+                                        </div>
+                                        <div class="flex flex-col gap-2">
+                                            <h1>:</h1>
+                                            <h1>:</h1>
+                                            <h1>:</h1>
+                                        </div>
+                                        <div class="w-3/5 flex flex-col gap-2">
+                                            <span>SP2308000001</span>
+                                            <span>Partner</span>
+                                            <span>Tanah Abang, Jakarta - 10224</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-row justify-end gap-2 lg:gap-3">
+                                        <a href="" rel="noopener noreferrer" class="w-7 h-7">
+                                            <img src="./dist/images/icon/WA.svg" loading="lazy" alt="icon wa" class="w-full h-full">
+                                        </a>
+                                        <a href="" rel="noopener noreferrer" class="w-7 h-7">
+                                            <img src="./dist/images/icon/IG.svg" loading="lazy" alt="icon ig" class="w-full h-full">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card center -->
+                            <div class="w-[90%] md:w-[45%] lg:w-[30%] bg-gradient-primary rounded-3xl p-[2px] card-center">
+                                <div class="h-full w-full bg-white rounded-3xl flex flex-col gap-3 px-4 lg:px-6 pt-5 pb-2 ">
+                                    <h1 class="text-sm lg:text-base font-semibold uppercase">
+                                        Star Center Official Surabaya
+                                    </h1>
+                                    <div class="w-full text-xs lg:text-sm flex flex-row gap-2">
+                                        <div class="flex flex-col gap-2">
+                                            <h1>Seller ID</h1>
+                                            <h1>Seller Status</h1>
+                                            <h1>Alamat</h1>
+                                        </div>
+                                        <div class="flex flex-col gap-2">
+                                            <h1>:</h1>
+                                            <h1>:</h1>
+                                            <h1>:</h1>
+                                        </div>
+                                        <div class="w-3/5 flex flex-col gap-2">
+                                            <span>SP2308000002</span>
+                                            <span>Partner</span>
+                                            <span>Kejeran, Surabaya, Jawa Timur - 61984</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-row justify-end gap-2 lg:gap-3">
+                                        <a href="" rel="noopener noreferrer" class="w-7 h-7">
+                                            <img src="./dist/images/icon/WA.svg" loading="lazy" alt="icon wa" class="w-full h-full">
+                                        </a>
+                                        <a href="" rel="noopener noreferrer" class="w-7 h-7">
+                                            <img src="./dist/images/icon/IG.svg" loading="lazy" alt="icon ig" class="w-full h-full">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card center -->
+                            <div class="w-[90%] md:w-[45%] lg:w-[30%] bg-gradient-primary rounded-3xl p-[2px] card-center">
+                                <div class="h-full w-full bg-white rounded-3xl flex flex-col gap-3 px-4 lg:px-6 pt-5 pb-2 ">
+                                    <h1 class="text-sm lg:text-base font-semibold uppercase">
+                                        Star Center Official Bekasi
+                                    </h1>
+                                    <div class="w-full text-xs lg:text-sm flex flex-row gap-2">
+                                        <div class="flex flex-col gap-2">
+                                            <h1>Seller ID</h1>
+                                            <h1>Seller Status</h1>
+                                            <h1>Alamat</h1>
+                                        </div>
+                                        <div class="flex flex-col gap-2">
+                                            <h1>:</h1>
+                                            <h1>:</h1>
+                                            <h1>:</h1>
+                                        </div>
+                                        <div class="w-3/5 flex flex-col gap-2">
+                                            <span>SP2308000003</span>
+                                            <span>Partner</span>
+                                            <span>Gebang, Bekasi, Jawa Barat - 30294</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-row justify-end gap-2 lg:gap-3">
+                                        <a href="" rel="noopener noreferrer" class="w-7 h-7">
+                                            <img src="./dist/images/icon/WA.svg" loading="lazy" alt="icon wa" class="w-full h-full">
+                                        </a>
+                                        <a href="" rel="noopener noreferrer" class="w-7 h-7">
+                                            <img src="./dist/images/icon/IG.svg" loading="lazy" alt="icon ig" class="w-full h-full">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card center -->
+                            <div class="w-[90%] md:w-[45%] lg:w-[30%] bg-gradient-primary rounded-3xl p-[2px] card-center">
+                                <div class="h-full w-full bg-white rounded-3xl flex flex-col gap-3 px-4 lg:px-6 pt-5 pb-2 ">
+                                    <h1 class="text-sm lg:text-base font-semibold uppercase">
+                                        Star Center Official Malang
+                                    </h1>
+                                    <div class="w-full text-xs lg:text-sm flex flex-row gap-2">
+                                        <div class="flex flex-col gap-2">
+                                            <h1>Seller ID</h1>
+                                            <h1>Seller Status</h1>
+                                            <h1>Alamat</h1>
+                                        </div>
+                                        <div class="flex flex-col gap-2">
+                                            <h1>:</h1>
+                                            <h1>:</h1>
+                                            <h1>:</h1>
+                                        </div>
+                                        <div class="w-3/5 flex flex-col gap-2">
+                                            <span>SC2308000003</span>
+                                            <span>Center</span>
+                                            <span>Embong Gedhe, Malang, Jawa Timur - 70284</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-row justify-end gap-2 lg:gap-3">
+                                        <a href="" rel="noopener noreferrer" class="w-7 h-7">
+                                            <img src="./dist/images/icon/WA.svg" loading="lazy" alt="icon wa" class="w-full h-full">
+                                        </a>
+                                        <a href="" rel="noopener noreferrer" class="w-7 h-7">
+                                            <img src="./dist/images/icon/IG.svg" loading="lazy" alt="icon ig" class="w-full h-full">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                    </div>
+
+                    <div class="hidden lg:block h-[557px] w-[557px] bg-pinkSecondary rounded-full absolute -top-12 -left-[510px] z-20"></div>
+                    <div class="hidden lg:block h-[557px] w-[557px] bg-blueSecondary rounded-full absolute -top-12 -right-[510px] "></div>
+                </div>
+            </section>
+            <!-- section center end -->
+        </main>
+        
+        <!-- footer start -->
+        <footer class="h-64 lg:h-52 overflow-y-hidden">
+            <!-- footer content -->
+            <div class="h-64 lg:h-52 w-full flex flex-col lg:flex-row justify-start lg:justify-between items-start background-glasses py-5 px-7 lg:px-9 absolute z-20">
+                <div class="w-full md:w-2/5 flex flex-col gap-1 mt-0 lg:mt-4">
+                    <div class="flex flex-row gap-2">
+                        <h3 class="mb-1 lg:mb-3 text-sm font-semibold uppercase">Contact Us</h3>
+                        <img src="./dist/images/icon/Sort Up.svg" loading="lazy" alt="icon sort" id="arrow1" class="lg:hidden h-4 cursor-pointer">
+                    </div>
+                    <div class="flex flex-col" id="menu1">
+                        <div class="flex flex-row items-start lg:items-center gap-1">
+                            <img src="./dist/images/icon/Location.svg" alt="icon location" loading="lazy" class="w-3 h-3 mt-[1px]">
+                            <span class="text-xs font-light">Perumahan Heavenland Park BB-26, Lingkar Timur, Sidoarjo</span>
+                        </div>
+                        <div class="flex flex-row items-start lg:items-center gap-1">
+                            <img src="./dist/images/icon/WhatsApp.svg" alt="icon whatsapp" loading="lazy" class="w-3 h-3">
+                            <span class="text-xs font-light">+62-823-3201-7480</span>
+                        </div>
+                        <div class="flex flex-row items-start lg:items-center gap-1">
+                            <img src="./dist/images/icon/Letter.svg" alt="icon email" loading="lazy" class="w-3 h-3">
+                            <span class="text-xs font-light">contact@starinc.id</span>
+                        </div>
+                    </div>
+                    <div class="h-9 w-fit bg-white flex flex-row items-start mt-2 absolute bottom-0 right-0 lg:right-auto overflow-hidden">
+                        <select class="bg-white text-xs font-light focus:outline-none focus:ring-0 py-1 px-2">
+                            <option>Indonesia</option>
+                            <option>English</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="w-full lg:w-3/4 flex flex-col lg:flex-row justify-around gap-4 lg:gap-0 mt-4 lg:mt-4">
+                    <div class="flex flex-col gap-1">
+                        <div class="flex flex-row gap-2">
+                            <h3 class="mb-1 lg:mb-3 text-sm font-semibold uppercase">Starinc</h3>
+                            <img src="./dist/images/icon/Sort Up.svg" loading="lazy" alt="icon sort" id="arrow2" class="lg:hidden w-4 h-4 cursor-pointer rotate-180">
+                        </div>
+                        <div class="hidden lg:flex flex flex-col" id="menu2">
+                            <a href="index.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Home</a>
+                            <a href="shop.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Shop</a>
+                            <a href="about.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">About Us</a>
+                            <a href="contact.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Contact</a>
+                            <a href="faq.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">FAQ</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <div class="flex flex-row gap-2">
+                            <h3 class="mb-1 lg:mb-3 text-sm font-semibold uppercase">Policy</h3>
+                            <img src="./dist/images/icon/Sort Up.svg" loading="lazy" alt="icon sort" id="arrow3" class="lg:hidden w-4 h-4 cursor-pointer rotate-180">
+                        </div>
+                        <div class="hidden lg:flex flex flex-col" id="menu3">
+                            <a href="shipping.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Shipping</a>
+                            <a href="refund.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Refund</a>
+                            <a href="tos.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Terms of Service</a>
+                            <a href="privacy.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Privacy Policy</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <div class="flex flex-row gap-2">
+                            <h3 class="mb-1 lg:mb-3 text-sm font-semibold uppercase">Follow Us</h3>
+                            <img src="./dist/images/icon/Sort Up.svg" loading="lazy" alt="icon sort" id="arrow4" class="lg:hidden w-4 h-4 cursor-pointer rotate-180">
+                        </div>
+                        <div class="hidden lg:flex flex flex-col" id="menu4">
+                            <a href="https://www.instagram.com/starinc.official/" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+                                <img src="./dist/images/icon/Instagram.svg" alt="icon instagram" loading="lazy" class="w-3 h-3">
+                                <span class="text-xs font-light">Instagram</span>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=100083928816873" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+                                <img src="./dist/images/icon/Facebook.svg" alt="icon facebook" loading="lazy" class="w-3 h-3">
+                                <span class="text-xs font-light">Facebook</span>
+                            </a>
+                            <a href="https://www.tiktok.com/@starinc.official" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+                                <img src="./dist/images/icon/TikTok.svg" alt="icon tiktok" loading="lazy" class="w-3 h-3">
+                                <span class="text-xs font-light">Tiktok</span>
+                            </a>
+                            <a href="https://www.youtube.com/@starincofficial" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+                                <img src="./dist/images/icon/YouTube.svg" alt="icon youtube" loading="lazy" class="w-3 h-3">
+                                <span class="text-xs font-light">Youtube</span>
+                            </a>
+                            <a href="https://twitter.com/starincofficial" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+                                <img src="./dist/images/icon/TwitterX.svg" alt="icon twitter" loading="lazy" class="w-3 h-3">
+                                <span class="text-xs font-light">Twitter</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ornament footer -->
+            <div class="relative -bottom-60 lg:-bottom-44">
+                <div class="w-screen flex justify-center absolute">
+                    <div class="h-[50vh] w-[50vh] bg-pinkSecondary rounded-full"></div>
+                    <div class="h-[60vh] w-[60vh] bg-blueSecondary rounded-full"></div>
+                    <div class="h-[50vh] w-[50vh] bg-pinkSecondary rounded-full"></div>
+                    <div class="h-[60vh] w-[60vh] bg-blueSecondary rounded-full"></div>
+                    <div class="h-[50vh] w-[50vh] bg-pinkSecondary rounded-full"></div>
+                    <div class="h-[60vh] w-[60vh] bg-blueSecondary rounded-full"></div>
+                    <div class="h-[50vh] w-[50vh] bg-pinkSecondary rounded-full"></div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+
+        <!-- back to top start -->
+        <a href="#home" id="to-top" class="hidden h-9 w-9 rounded-full bg-gradient-primary border-2 border-white flex justify-center items-center fixed bottom-10 right-10 z-40 cursor-pointer animate-pulse" data-aos="fade-up">
+            <img src="./dist/images/icon/arrow-white.svg" loading="lazy" alt="icon to top" class="w-full h-full object-cover">
+        </a>
+        <!-- back to top end -->
+
+        <script src="dist/js/script.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                once: true,
+                duration: 500,
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="./dist/output.css" rel="stylesheet">
+        <link rel="icon" href="./dist/images/icon/Starinc-Logomark.svg" />
+        <meta name="description" content="Starinc Official" />
+        <title>Starinc</title>
+    </head>
+    <body>
+        <!-- navbar start -->
+        <nav class="hidden h-14 w-full flex justify-center items-center absolute top-0 left-0 z-10 animate__animated animate__fadeInDown">
+            <div class="w-full">
+                <div class="flex justify-between items-center relative">
+                    <div class="w-fit pl-5 lg:pl-9 flex justify-center items-center gap-5">
+                        <a href="index.html" rel="noopener noreferrer" class="flex">
+                            <img src="./dist/images/logo/starinc-1.png" loading="lazy" alt="logo starinc text" class="h-5 w-auto">
+                        </a>
+                        <div id="nav-menu" class="hidden lg:block lg:static w-screen lg:w-full bg-white lg:bg-transparent bg-opacity-90 lg:bg-opacity-0 backdrop-blur-sm lg:backdrop-blur-0 lg:max-w-full shadow-lg lg:shadow-none            rounded-b-lg absolute top-[41px] right-0 py-2      lg:rounded-none">
+                            <ul class="flex flex-col lg:flex-row items-end lg:items-center gap-3 lg:gap-0 text-sm lg:text-xs font-medium uppercase py-5">
+                                <li class="group"><a href="about.html" rel="noopener noreferrer" class="mx-8 py-2">About</a></li>
+                                <li class="group"><a href="contact.html" rel="noopener noreferrer" class="mx-8 py-2">Contact</a></li>
+                                <li class="group"><a href="center.html" rel="noopener noreferrer" class="mx-8 py-2">Find Center</a></li>
+                                <li class="group"><a href="starpreneur.html" rel="noopener noreferrer" class="mx-8 py-2">Starpreneur</a></li>
+                                <li class="group"><a href="cart.html" rel="noopener noreferrer" class="lg:hidden mx-8 py-2">Cart (0)</a></li>
+                            
+                                <div class="lg:hidden w-full my-3 px-5">
+                                    <hr class="h-[2px] bg-pinkThird border-0 z-40 self-center">
+                                </div>
+
+                                <!-- jika belum login -->
+                                <a href="login.html" rel="noopener noreferrer" class="lg:hidden bg-gradient-primary rounded-3xl mx-8 p-[1px] text-sm text-white uppercase cursor-pointer">
+                                    <div class="h-full w-full bg-white rounded-3xl px-3 py-1">
+                                        <span class="text-gradient-primary">Login</span>
+                                    </div>
+                                </a>
+
+                                <!-- sudah login -->
+                                <!-- <li class="group"><a href="#" rel="noopener noreferrer" class="lg:hidden mx-8 py-2">Hi, Username</a></li>
+                                <li class="group"><a href="dashboard.html" rel="noopener noreferrer" class="lg:hidden mx-8 py-2">Riwayat Transaksi</a></li>
+                                <li class="group"><a href="login.html" rel="noopener noreferrer" class="lg:hidden mx-8 py-2">Logout</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pr-5 lg:pr-9 flex justify-center items-center gap-5 lg:gap-2">
+                        <!-- muncul kecuali pada halaman shop -->
+                        <a href="shop.html" rel="noopener noreferrer" class="bg-gradient-primary rounded-3xl mx-1 lg:mx-3 px-3 py-1 text-xs lg:text-sm text-white uppercase cursor-pointer">
+                            Shop Now
+                        </a>
+
+                        <!-- muncul jika dihalaman shop -->
+                        <!-- <button class="h-[25px] w-[25px] bg-gradient-primary rounded-full p-[3px] mr-0 lg:mr-1" onclick="showModal()">
+                            <img src="./dist/images/icon/Search.svg" alt="icon search" loading="lazy" class="w-full h-full">
+                        </button> -->
+
+                        <!-- cart icon -->
+                        <a href="cart.html" rel="noopener noreferrer" class="hidden md:block relative">
+                            <div class="h-4 w-4 bg-yellowPrimary rounded-full flex justify-center items-center text-white text-xxs truncate p-[10px] absolute -top-[10px] -right-3">
+                                28
+                            </div>
+                            <img src="./dist/images/icon/cart.svg" alt="icon cart" loading="lazy" class="w-7 h-7 cursor-pointer">
+                        </a>
+                        <div class="hidden lg:block h-full w-7">
+                            <hr class="h-[2px] w-full bg-pinkThird rotate-90 border-0 relative">
+                        </div>
+
+                        <!-- belum login -->
+                        <a href="login.html" rel="noopener noreferrer" class="hidden lg:block bg-gradient-primary rounded-3xl mx-1 p-[1px] text-sm text-white uppercase cursor-pointer">
+                            <div class="h-full w-full bg-white rounded-3xl px-3 py-1">
+                                <span class="text-gradient-primary">Login</span>
+                            </div>
+                        </a>
+
+                        <!-- sudah login -->
+                        <!-- <button class="hidden lg:block h-8 w-8 bg-gradient-primary rounded-full p-1 cursor-pointer">
+                            <img src="./dist/images/icon/User.svg" alt="" class="h-full w-full object-cover rounded-full">
+                        </button> -->
+
+                        <!-- menu login -->
+                        <div id="menu-profile" class="hidden bg-white rounded-2xl shadow-2xl flex flex-col text-end gap-1 py-3 px-5 absolute top-[70px] right-5">
+                            <div class="flex flex-row justify-center items-center gap-2">
+                                <div class="h-9 w-9 bg-transparent">
+                                    <img src="./dist/images/icon/Starinc-Orange.svg" loading="lazy" alt="icon starinc" class="h-full h-full">
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-sm font-semibold">Nadia Julianan Sinaga</span>
+                                    <span class="text-sm font-light text-gray-600">SC2308000001</span>
+                                </div>
+                            </div>
+                            <hr class="w-[95%] self-center mt-3 mb-3">
+                            <a href="dashboard.html" rel="noopener noreferrer" class="text-sm font-light">Dashboard</a>
+                            <a href="dashboard.html" rel="noopener noreferrer" class="text-sm font-light">Riwayat Transaksi</a>
+                            <a href="login.html" rel="noopener noreferrer" class="text-sm mt-3">Logout</a>
+                        </div>
+                        
+                        <!-- hamburger icon -->
+                        <button id="hamburger" name="hamburger" type="button" class="block lg:hidden">
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar end -->
+
+        <!-- hero section start -->
+        <header id="home" class="h-[55vh] lg:h-[70vh] w-screen bg-gradient-primary self-end">
+            <div class="h-full w-full flex flex-row justify-between items-center gap-0 lg:gap-16 px-5 lg:px-9">
+                <!-- left -->
+                <div class="w-3/4 flex flex-col justify-start gap-y-5 lg:gap-y-10 px-0 lg:px-5">
+                    <div class="flex flex-col text-white mt-3 relative" data-aos="fade-up">
+                        <!-- ornament -->
+                        <img src="./dist/images/icon/Star-White.svg" alt="icon star" loading="lazy" class="h-4 lg:h-7 w-4 lg:w-7 absolute -top-5 md:-top-10">
+                        <img src="./dist/images/icon/Star-White.svg" alt="icon star" loading="lazy" class="h-2 lg:h-3 w-2 lg:w-3 absolute -top-7 lg:-top-20 right-20 md:right-40 lg:right-72">
+                        <img src="./dist/images/icon/Star-White.svg" alt="icon star" loading="lazy" class="h-3 lg:h-5 w-3 lg:w-5 absolute bottom-9 lg:bottom-5 right-7 md:right-20 lg:right-36">
+                        
+                        <h1 class="text-3xl md:text-5xl lg:text-8xl font-bold uppercase tracking-wider">START</h1>
+                        <h3 class="text-base md:text-3xl lg:text-6xl font-normal lg:font-medium capitalize tracking-normal lg:tracking-widest">STARPRENEURSHIP</h3>
+                        <h5 class="text-xxs md:text-xl lg:text-2xl font-light tracking-tight lg:tracking-wide">Guiding You to Shine and Excel like a Star!</h5>
+                    </div>
+                    <div class="flex flex-col lg:flex-row justify-between gap-5 lg:gap-4">
+                        <p class="flex-1 text-white text-xxs md:text-sm lg:text-lg font-light lg:font-normal" data-aos="fade-up" data-aos-delay="50">
+                            Jadilah bagian dari perkembangan industri kecantikan dan kemajuan bisnis secara global
+                        </p> 
+                        <div class="flex-initial flex flex-col gap-1 lg:gap-2 w-auto items-start lg:items-center" data-aos="fade-up" data-aos-delay="100">
+                            <div class="w-fit text-xxs md:text-base lg:text-xl font-bold text-white uppercase rounded-3xl bg-gradient-primary cursor-pointer">
+                                <div class="px-3 py-1 md:py-2 w-fit lg:w-full h-full bg-white text-transparent rounded-3xl flex items-center justify-center">
+                                    <span class="text-gradient-primary text-center">Join Now!</span>
+                                </div>
+                            </div>
+                            <span class="text-xxs md:text-xs font-light text-white w-full">5000+ Orang telah bergabung</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- right -->
+                <div class="lg:h-[60vh] w-4/12 lg:w-[90vh] flex items-end justify-center relative" data-aos="fade-left">
+                    <!-- ornament -->
+                    <img src="./dist/images/icon/Star-White.svg" alt="icon star" loading="lazy" class="h-4 lg:h-7 w-4 lg:w-7 absolute -top-5 lg:top-0 right-0 lg:right-24">
+                    <img src="./dist/images/icon/Star-White.svg" alt="icon star" loading="lazy" class="h-2 lg:h-3 w-2 lg:w-3 absolute top-2 lg:top-20 left-3 lg:left-36">
+                    <img src="./dist/images/icon/Star-White.svg" alt="icon star" loading="lazy" class="h-3 lg:h-5 w-3 lg:w-5 absolute -bottom-7 lg:bottom-7 right-9 lg:right-44">
+                    
+                    <img src="./dist/images/icon/favicon-starinc-white.svg" loading="lazy" alt="icon starinc" class="w-full h-full">
+                </div>
+            </div>
+        </header>
+        <!-- hero section end -->
+
+        <!-- main start -->
+        <main id="main-content">
+            <!-- sectoin STARPRENEUR BENEFIT start -->
+            <section class="w-full flex flex-col mt-10 lg:mt-14">
+                <span class="text-2xl lg:text-4xl text-center text-gradient-primary font-bold uppercase tracking-[1.6px] mb-2 px-3 lg:px-0" data-aos="fade-up">
+                    STARPRENEUR BENEFIT
+                </span>
+                <div class="h-[400px] lg:h-[500px] flex flex-row justify-start md:justify-center items-center gap-7 mt-7 px-7 lg:px-0 overflow-auto" data-aos="fade-up" data-aos-delay="50">
+                    <!-- card -->
+                    <div class="h-72 lg:h-80 w-48 lg:w-80 bg-card-benefit-primary rounded-[20px] flex flex-col flex-shrink-0 justify-start items-center text-white px-8 py-10 relative">
+                        <img src="./dist/images/icon/Internet.svg" alt="icon internet" loading="lazy" class="h-10 lg:h-16 w-10 lg:w-16">
+                        <div class="text-xs lg:text-base text-center font-semibold px-0 lg:px-3">
+                            Worldwide Distribution Channel
+                        </div>
+                        <p class="h-[75%] text-xxs lg:text-sm text-center text-clip font-light mt-2 lg:mt-4 py-1 overflow-hidden">
+                            Lorem ipsum dolor sit amet consectetur. Amet dictumst risus massa id diam eu sed turpis odio. Tristique facilisis aliquet gravida mollis amet lacus eu.
+                        </p>
+                        <div class="h-20 lg:h-40 w-20 lg:w-40 bg-blueSecondary/50 rounded-full absolute -top-10 lg:-top-16 -left-5 lg:-left-20 -z-10"></div>
+                    </div>
+                    <!-- card -->
+                    <div class="h-72 lg:h-80 w-48 lg:w-80 bg-card-benefit-secondary rounded-[20px] flex flex-col flex-shrink-0 justify-start items-center text-white px-8 py-10 relative">
+                        <img src="./dist/images/icon/Commercial.svg" alt="icon internet" loading="lazy" class="w-10 lg:w-16 h-10 lg:h-16">
+                        <div class="text-xs lg:text-base text-center font-semibold px-0 lg:px-3">
+                            Support Marketing Tools
+                        </div>
+                        <p class="h-[75%] text-xxs lg:text-sm text-center text-clip font-light mt-2 lg:mt-4 py-1 overflow-hidden">
+                            Lorem ipsum dolor sit amet consectetur. Amet dictumst risus massa id diam eu sed turpis odio. Tristique facilisis aliquet gravida mollis amet lacus eu.
+                        </p>
+                        <div class="h-20 lg:h-40 w-20 lg:w-40 rounded-full bg-pinkSixth/70 absolute -bottom-5 lg:-bottom-10 -left-4 lg:-left-6 -z-10"></div>
+                        <div class="h-10 lg:h-20 w-10 lg:w-20 rounded-full bg-pinkSixth/70 absolute -top-3 lg:-top-7 -right-3 lg:-right-5 -z-10"></div>
+                    </div>
+                    <!-- card -->
+                    <div class="h-72 lg:h-80 w-48 lg:w-80 bg-card-benefit-third rounded-[20px] flex flex-col flex-shrink-0 justify-start items-center text-white px-8 py-10 relative">
+                        <img src="./dist/images/icon/Classroom.svg" alt="icon internet" loading="lazy" class="w-10 lg:w-16 h-10 lg:h-16">
+                        <div class="text-xs lg:text-base text-center font-semibold px-0 lg:px-3">
+                            Starinc Business Consultant & Intensive Mentoring
+                        </div>
+                        <p class="h-[75%] text-xxs lg:text-sm text-center text-clip font-light mt-2 lg:mt-4 py-1 overflow-hidden">
+                            Lorem ipsum dolor sit amet consectetur. Amet dictumst risus massa id diam eu sed turpis odio. Tristique facilisis aliquet gravida mollis amet lacus eu.
+                        </p>
+                        <div class="absolute -bottom-5 lg:-bottom-10 -right-7 lg:-right-14 -z-10 h-16 lg:h-36 w-16 lg:w-36 rounded-full bg-yellowSecondary"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- sectoin STARPRENEUR BENEFIT end -->
+
+            <!-- sectoin BECOME A STARPRENEUR start -->
+            <section class="bg-gradient-primary flex flex-col justify-center items-center gap-3 lg:gap-5 mt-10 relative overflow-hidden">
+                <span class="text-xl lg:text-3xl text-center text-white font-bold uppercase tracking-[1.6px] mt-9 mb-3 lg:mb-0 z-20" data-aos="fade-up">
+                    BECOME A STARPRENEUR
+                </span>
+                <div class="w-full lg:w-[50%] text-white text-xs lg:text-sm text-center font-light tracking-wide mb-0 lg:mb-12 py-3 lg:py-5 px-5 lg:px-0 order-2 z-20" data-aos="fade-up" data-aos-delay="50">
+                    Lorem ipsum dolor sit amet consectetur. Nibh vitae ullamcorper at in. Vulputate urna quis dui vestibulum nibh. Vel risus gravida tincidunt ipsum sit sed tristique at. Arcu ullamcorper sem urna mauris tempus ultrices id. Enim sed et mattis urna urna et tellus. Ac sem at cursus enim suspendisse sed nisl elementum facilisi. Turpis ipsum non elementum et nunc. Condimentum aliquet sed eget congue pretium aliquet mus sed.
+                </div>
+                <div class="h-20 lg:h-96 w-20 lg:w-96 order-1 lg:absolute -left-36" data-aos="fade-right" data-aos-delay="50">
+                    <img src="./dist/images/icon/favicon-starinc-white.svg" loading="lazy" alt="icon starinc" class="w-full h-full">
+                </div>
+                <div class="w-full lg:w-[421px] mb-9 lg:mb-0 px-12 lg:px-0 order-3 lg:absolute -right-2 z-10" data-aos="fade-left" data-aos-delay="50">
+                    <img src="./dist/images/icon/peta indonesia 1.svg" loading="lazy" alt="icon starinc" class="w-full h-full opacity-80 lg:opacity-50">
+                </div>
+            </section>
+            <!-- sectoin BECOME A STARPRENEUR end -->
+
+            <!-- section STARPRENEUR TIER start -->
+            <section class="w-full flex flex-col gap-11 mt-9 mb-12">
+                <span class="text-2xl lg:text-4xl text-gradient-primary text-center font-bold uppercase tracking-[1.6px] mt-14" data-aos="fade-up">
+                    STARPRENEUR TIER
+                </span>
+                <div class="w-full flex flex-col md:flex-row items-center justify-start md:justify-center gap-10 lg:gap-20 px-12 lg:px-5" data-aos="fade-up" data-aos-delay="50">
+                    <div class="h-full w-full lg:w-[350px] bg-card-benefit-primary rounded-[20px] flex flex-col items-center gap-8 py-9 px-3 lg:px-6 relative">
+                        <div class="w-fit border-2 border-white rounded-xl text-white text-base lg:text-xl font-bold tracking-wider uppercase px-5 py-2">
+                            STAR PARTNER
+                        </div>
+                        <ul class="text-white text-xxs lg:text-sm tracking-wide self-start list-disc list-outside px-5 space-y-1">
+                            <li><b>Margin profit 17%</b></li>
+                            <li>Minimal purchase <b>Rp. 3.500.000,-</b></li>
+                            <li>Bebas pilih produk</li>
+                            <li>Get point & reward</li>
+                            <li>Berkesempatan menang undian
+                                <ul class="list-disc list-outside ml-5 lg:ml-10 mt-2 space-y-1">
+                                    <li>Jalan-jalan ke luar negeri</li>
+                                    <li>Gadget terbaru</li>
+                                    <li>Produk gratis</li>
+                                    <li>Uang tunai</li>
+                                </ul>
+                            </li>
+                            <li>FREE konsultasi & pelatihan</li>
+                            <li>FREE marketing tools
+                                <ul class="list-disc list-outside ml-5 lg:ml-10 mt-2 space-y-1">
+                                    <li>Katalog</li>
+                                    <li>Brosur</li>
+                                    <li>Konten social media</li>
+                                    <li>Banner</li>
+                                    <li>etc</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="h-24 lg:h-40 w-24 lg:w-40 bg-blueSecondary/50 rounded-full absolute -top-7 lg:-top-12 -left-7 lg:-left-24 -z-10"></div>
+                        <div class="h-24 w-24 opacity-50 absolute bottom-2 right-2">
+                            <img src="./dist/images/icon/favicon-starinc-white.svg" loading="lazy" alt="icon starinc" class="w-full h-full">
+                        </div>
+                    </div>
+                    <div class="h-full w-full lg:w-[350px] bg-card-benefit-third rounded-[20px] flex flex-col items-center gap-8 py-9 px-3 lg:px-6 relative">
+                        <div class="w-fit border-2 border-white rounded-xl text-white text-base lg:text-xl font-bold tracking-wider uppercase px-5 py-2">
+                            STAR Center
+                        </div>
+                        <ul class="text-white text-xxs lg:text-sm tracking-wide self-start list-disc list-outside px-5 space-y-1">
+                            <li><b>Margin profit 23%</b></li>
+                            <li>Minimal purchase <b>Rp. 35.000.000,-</b></li>
+                            <li>Bebas pilih produk</li>
+                            <li>Get point & reward</li>
+                            <li>Berkesempatan menang undian
+                                <ul class="list-disc list-outside ml-5 lg:ml-10 mt-2 space-y-1">
+                                    <li>Jalan-jalan ke luar negeri</li>
+                                    <li>Gadget terbaru</li>
+                                    <li>Produk gratis</li>
+                                    <li>Uang tunai</li>
+                                </ul>
+                            </li>
+                            <li>FREE konsultasi & pelatihan</li>
+                            <li>FREE marketing tools
+                                <ul class="list-disc list-outside ml-5 lg:ml-10 mt-2 space-y-1">
+                                    <li>Katalog</li>
+                                    <li>Brosur</li>
+                                    <li>Konten social media</li>
+                                    <li>Banner</li>
+                                    <li>etc</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="h-24 lg:h-40 w-24 lg:w-40 bg-yellowSecondary rounded-full absolute -bottom-10 -right-7 lg:-right-20 -z-10"></div>
+                        <div class="h-24 w-24 opacity-50 absolute bottom-2 right-2">
+                            <img src="./dist/images/icon/favicon-starinc-white.svg" loading="lazy" alt="icon starinc" class="w-full h-full">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section STARPRENEUR TIER end -->
+            
+            <!-- section testimonial center start -->
+            <section class="w-full flex justify-center mt-20 px-6 lg:px-0">
+                <div class="w-full lg:w-[80%] bg-gradient-primary rounded-2xl flex flex-col justify-center items-center gap-0 lg:gap-2 text-white py-7 px-7 lg:px-20" data-aos="fade-up">
+                    <div class="flex flex-col lg:flex-row gap-0 lg:gap-2 relative">
+                        <span class="text-8xl font-times font-medium tracking-[4.8px] lg:absolute top-2 -left-1">“</span>
+                        <p class="text-sm text-center tracking-wide py-0 lg:py-5 px-0 lg:px-11">
+                            Lorem ipsum dolor sit amet consectetur. Nibh vitae ullamcorper at in. Vulputate urna quis dui vestibulum nibh. Vel risus gravida tincidunt ipsum sit sed tristique at. Arcu ullamcorper sem urna mauris tempus ultrices id. Enim sed et mattis urna urna et tellus. Ac sem at cursus enim suspendisse sed nisl elementum facilisi. Turpis ipsum non elementum et nunc. Condimentum aliquet sed eget congue pretium aliquet mus sed.
+                        </p>
+                        <span class="text-8xl font-times font-medium tracking-[4.8px] mt-5 lg:mt-0 self-end lg:absolute -bottom-14 -right-2">”</span>
+                    </div>
+                    <div class="flex flex-col justify-center items-center text-center">
+                        <h5 class="text-sm lg:text-base font-semibold">Devi</h5>
+                        <span class="text-xs lg:text-sm font-light">Star Center Makasar</span>
+                    </div>
+                </div>
+            </section>
+            <!-- section testimonial center end -->
+
+            <!-- section reward start -->
+            <section class="mt-14 lg:mt-20 mb-20">
+                <div class="w-full flex flex-col justify-center items-center gap-5 lg:gap-14 relative overflow-hidden">
+                    <span class="text-2xl lg:text-4xl text-center text-gradient-primary font-bold tracking-[1.6px] uppercase px-3 lg:px-0" data-aos="fade-up">
+                        reward
+                    </span>
+                    <div class="w-full lg:w-3/4 flex flow-row flex-wrap justify-center text-center gap-3 lg:gap-5 px-5 lg:px-10">
+                        <div class="w-[40%] lg:w-[30%] flex flex-col justify-center items-center gap-2 lg:gap-5 px-1 lg:px-2 py-3" data-aos="fade-up" data-aos-delay="50">
+                            <div class="h-[60%]">
+                                <img src="./dist/images/icon/point.svg" loading="lazy" alt="icon point" class="h-14 lg:h-20 w-14 lg:w-20 object-cover">
+                            </div>
+                            <span class="font-light text-xs lg:text-sm w-3/5 h-[40%]">Point di setiap order!</span>
+                        </div>
+                        <div class="w-[40%] lg:w-[30%] flex flex-col justify-center items-center gap-2 lg:gap-5 px-1 lg:px-2 py-3" data-aos="fade-up" data-aos-delay="100">
+                            <div class="h-[60%]">
+                                <img src="./dist/images/icon/form.svg" loading="lazy" alt="icon point" class="h-14 lg:h-20 w-14 lg:w-20 object-cover">
+                            </div>
+                            <span class="font-light text-xs lg:text-sm w-3/5 h-[40%]">Daftar Mudah & Gratis</span>
+                        </div>
+                        <div class="w-[40%] lg:w-[30%] flex flex-col justify-center items-center gap-2 lg:gap-5 px-1 lg:px-2 py-3" data-aos="fade-up" data-aos-delay="150">
+                            <div class="h-[60%]">
+                                <img src="./dist/images/icon/cashback.svg" loading="lazy" alt="icon point" class="h-14 lg:h-20 w-14 lg:w-20 object-cover">
+                            </div>
+                            <span class="font-light text-xs lg:text-sm w-3/5 h-[40%]">Cashback & Reward yang menjanjikan!</span>
+                        </div>
+                        <div class="w-[40%] lg:w-[30%] flex flex-col justify-center items-center gap-2 lg:gap-5 px-1 lg:px-2 py-3" data-aos="fade-up" data-aos-delay="200">
+                            <div class="h-[60%]">
+                                <img src="./dist/images/icon/shield.svg" loading="lazy" alt="icon point" class="h-14 lg:h-20 w-14 lg:w-20 object-cover">
+                            </div>
+                            <span class="font-light text-xs lg:text-sm w-3/5 h-[40%]">Fasilitas AVO Guarantee</span>
+                        </div>
+                        <div class="w-[40%] lg:w-[30%] flex flex-col justify-center items-center gap-2 lg:gap-5 px-1 lg:px-2 py-3" data-aos="fade-up" data-aos-delay="250">
+                            <div class="h-[60%]">
+                                <img src="./dist/images/icon/products.svg" loading="lazy" alt="icon point" class="h-14 lg:h-20 w-14 lg:w-20 object-cover">
+                            </div>
+                            <span class="font-light text-xs lg:text-sm w-3/5 h-[40%]">Bebas Pilih Produk</span>
+                        </div>
+                        <div class="w-[40%] lg:w-[30%] flex flex-col justify-center items-center gap-2 lg:gap-5 px-1 lg:px-2 py-3" data-aos="fade-up" data-aos-delay="300">
+                            <div class="h-[60%]">
+                                <img src="./dist/images/icon/training.svg" loading="lazy" alt="icon point" class="h-14 lg:h-20 w-14 lg:w-20 object-cover">
+                            </div>
+                            <span class="font-light text-xs lg:text-sm w-3/5 h-[40%]">Pelatihan Gratis</span>
+                        </div>
+                    </div>
+                    <a class="bg-gradient-primary rounded-3xl flex flex-row justify-center items-center gap-2 cursor-pointer mt-3 lg:mt-0 px-5 lg:px-8 py-2" data-aos="fade-up">
+                        <h5 class="text-white text-sm lg:text-xl font-semibold tracking-wider uppercase">Register Now</h5>
+                    </a>
+
+                    <div class="hidden lg:block h-[557px] w-[557px] absolute -top-12 -left-[450px] bg-blueSecondary rounded-full z-20"></div>
+                    <div class="hidden lg:block h-[557px] w-[557px] absolute -bottom-10 -right-[450px] bg-pinkSecondary rounded-full"></div>
+                </div>
+            </section>
+            <!-- section reward end -->
+        </main>
+        
+        <!-- footer start -->
+        <footer class="h-64 lg:h-52 overflow-y-hidden">
+            <!-- footer content -->
+            <div class="h-64 lg:h-52 w-full flex flex-col lg:flex-row justify-start lg:justify-between items-start background-glasses py-5 px-7 lg:px-9 absolute z-20">
+                <div class="w-full md:w-2/5 flex flex-col gap-1 mt-0 lg:mt-4">
+                    <div class="flex flex-row gap-2">
+                        <h3 class="mb-1 lg:mb-3 text-sm font-semibold uppercase">Contact Us</h3>
+                        <img src="./dist/images/icon/Sort Up.svg" loading="lazy" alt="icon sort" id="arrow1" class="lg:hidden h-4 cursor-pointer">
+                    </div>
+                    <div class="flex flex-col" id="menu1">
+                        <div class="flex flex-row items-start lg:items-center gap-1">
+                            <img src="./dist/images/icon/Location.svg" alt="icon location" loading="lazy" class="w-3 h-3 mt-[1px]">
+                            <span class="text-xs font-light">Perumahan Heavenland Park BB-26, Lingkar Timur, Sidoarjo</span>
+                        </div>
+                        <div class="flex flex-row items-start lg:items-center gap-1">
+                            <img src="./dist/images/icon/WhatsApp.svg" alt="icon whatsapp" loading="lazy" class="w-3 h-3">
+                            <span class="text-xs font-light">+62-823-3201-7480</span>
+                        </div>
+                        <div class="flex flex-row items-start lg:items-center gap-1">
+                            <img src="./dist/images/icon/Letter.svg" alt="icon email" loading="lazy" class="w-3 h-3">
+                            <span class="text-xs font-light">contact@starinc.id</span>
+                        </div>
+                    </div>
+                    <div class="h-9 w-fit bg-white flex flex-row items-start mt-2 absolute bottom-0 right-0 lg:right-auto overflow-hidden">
+                        <select class="bg-white text-xs font-light focus:outline-none focus:ring-0 py-1 px-2">
+                            <option>Indonesia</option>
+                            <option>English</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="w-full lg:w-3/4 flex flex-col lg:flex-row justify-around gap-4 lg:gap-0 mt-4 lg:mt-4">
+                    <div class="flex flex-col gap-1">
+                        <div class="flex flex-row gap-2">
+                            <h3 class="mb-1 lg:mb-3 text-sm font-semibold uppercase">Starinc</h3>
+                            <img src="./dist/images/icon/Sort Up.svg" loading="lazy" alt="icon sort" id="arrow2" class="lg:hidden w-4 h-4 cursor-pointer rotate-180">
+                        </div>
+                        <div class="hidden lg:flex flex flex-col" id="menu2">
+                            <a href="index.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Home</a>
+                            <a href="shop.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Shop</a>
+                            <a href="about.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">About Us</a>
+                            <a href="contact.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Contact</a>
+                            <a href="faq.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">FAQ</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <div class="flex flex-row gap-2">
+                            <h3 class="mb-1 lg:mb-3 text-sm font-semibold uppercase">Policy</h3>
+                            <img src="./dist/images/icon/Sort Up.svg" loading="lazy" alt="icon sort" id="arrow3" class="lg:hidden w-4 h-4 cursor-pointer rotate-180">
+                        </div>
+                        <div class="hidden lg:flex flex flex-col" id="menu3">
+                            <a href="shipping.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Shipping</a>
+                            <a href="refund.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Refund</a>
+                            <a href="tos.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Terms of Service</a>
+                            <a href="privacy.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Privacy Policy</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <div class="flex flex-row gap-2">
+                            <h3 class="mb-1 lg:mb-3 text-sm font-semibold uppercase">Follow Us</h3>
+                            <img src="./dist/images/icon/Sort Up.svg" loading="lazy" alt="icon sort" id="arrow4" class="lg:hidden w-4 h-4 cursor-pointer rotate-180">
+                        </div>
+                        <div class="hidden lg:flex flex flex-col" id="menu4">
+                            <a href="https://www.instagram.com/starinc.official/" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+                                <img src="./dist/images/icon/Instagram.svg" alt="icon instagram" loading="lazy" class="w-3 h-3">
+                                <span class="text-xs font-light">Instagram</span>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=100083928816873" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+                                <img src="./dist/images/icon/Facebook.svg" alt="icon facebook" loading="lazy" class="w-3 h-3">
+                                <span class="text-xs font-light">Facebook</span>
+                            </a>
+                            <a href="https://www.tiktok.com/@starinc.official" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+                                <img src="./dist/images/icon/TikTok.svg" alt="icon tiktok" loading="lazy" class="w-3 h-3">
+                                <span class="text-xs font-light">Tiktok</span>
+                            </a>
+                            <a href="https://www.youtube.com/@starincofficial" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+                                <img src="./dist/images/icon/YouTube.svg" alt="icon youtube" loading="lazy" class="w-3 h-3">
+                                <span class="text-xs font-light">Youtube</span>
+                            </a>
+                            <a href="https://twitter.com/starincofficial" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+                                <img src="./dist/images/icon/TwitterX.svg" alt="icon twitter" loading="lazy" class="w-3 h-3">
+                                <span class="text-xs font-light">Twitter</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ornament footer -->
+            <div class="relative -bottom-60 lg:-bottom-44">
+                <div class="w-screen flex justify-center absolute">
+                    <div class="h-[50vh] w-[50vh] bg-pinkSecondary rounded-full"></div>
+                    <div class="h-[60vh] w-[60vh] bg-blueSecondary rounded-full"></div>
+                    <div class="h-[50vh] w-[50vh] bg-pinkSecondary rounded-full"></div>
+                    <div class="h-[60vh] w-[60vh] bg-blueSecondary rounded-full"></div>
+                    <div class="h-[50vh] w-[50vh] bg-pinkSecondary rounded-full"></div>
+                    <div class="h-[60vh] w-[60vh] bg-blueSecondary rounded-full"></div>
+                    <div class="h-[50vh] w-[50vh] bg-pinkSecondary rounded-full"></div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+
+        <!-- back to top start -->
+        <a href="#home" id="to-top" class="hidden h-9 w-9 rounded-full bg-gradient-primary border-2 border-white flex justify-center items-center fixed bottom-10 right-10 z-40 cursor-pointer animate-pulse" data-aos="fade-up">
+            <img src="./dist/images/icon/arrow-white.svg" loading="lazy" alt="icon to top" class="w-full h-full object-cover">
+        </a>
+        <!-- back to top end -->
+
+        <script src="dist/js/script.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                once: true,
+                duration: 500,
+            });
+        </script>
+    </body>
+</html>

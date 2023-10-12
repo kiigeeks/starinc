@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    background: white;
+    @apply font-poppins;
+    @apply text-blackPrimary;
+}
+
+* {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    scroll-behavior: smooth;
+    scrollbar-width: none !important; 
+
+    /* menghilangkan scroll */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+    }
+
+    *::-webkit-scrollbar {
+        width: 0;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+}
+
+.navbar-fixed {
+    @apply fixed z-40 bg-white bg-opacity-90 backdrop-blur-sm;
+    box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.05);
+    -webkit-box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.05);
+}
+
+.hamburger-line {
+    @apply w-[25px] h-[2px] my-[5px] block bg-black;
+}
+
+.hamburger-active > span:nth-child(1) {
+    @apply rotate-[35deg];
+}
+
+.hamburger-active > span:nth-child(2) {
+    @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+    @apply -rotate-[35deg];
+}
+
+.bg-gradient-primary {
+    @apply bg-gradient-to-br from-pinkPrimary to-bluePrimary;
+}
+
+.bg-gradient-secondary {
+    @apply bg-gradient-to-r from-pinkForth to-pinkThird;
+}
+
+.bg-gradient-third {
+    @apply bg-gradient-to-b lg:bg-gradient-to-r from-blueThird to-blueForth;
+}
+
+.bg-gradient-forth {
+    @apply bg-gradient-to-b from-grayPrimary/50 to-grayPrimary;
+}
+
+.bg-gradient-fifth {
+    @apply bg-gradient-to-br from-blueSecondary to-blueFith;
+}
+
+.bg-gradient-sixth {
+    @apply bg-gradient-to-r from-yellowForth to-yellowThird;
+}
+
+.bg-gradient-transparent {
+    @apply bg-gradient-to-t from-white/80 via-white/50 to-transparent;
+}
+
+.bg-card-benefit-primary {
+    @apply bg-gradient-to-tl from-blueFith to-blueSixth shadow-[0px_0px_20px_0px_rgb(195,235,255)];
+}
+
+.bg-card-benefit-secondary {
+    @apply bg-gradient-to-tl from-bluePrimary to-pinkPrimary shadow-[0px_0px_20px_0px_rgb(195,166,228)];
+}
+
+.bg-card-benefit-third {
+    @apply bg-gradient-to-tl from-yellowThird to-yellowForth shadow-[0px_0px_20px_0px_rgb(234,186,129)];
+}
+
+.text-gradient-primary {
+    @apply text-transparent bg-gradient-to-r from-pinkPrimary to-bluePrimary bg-clip-text
+}
+
+.background-glasses {
+    background: rgba(255, 255, 255, 0.20);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(14.5px);
+}
+
+.background-testimonial-cards {
+    border-radius: 20px;
+    opacity: 0.8;
+    background: #FFF;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
+}
+
+.truncate-testimonial {  
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 8;
+}
+
+.slide {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-dashboard {
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.10);
+}
+

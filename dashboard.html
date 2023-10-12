@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="./dist/output.css" rel="stylesheet">
+        <link rel="icon" href="./dist/images/icon/Starinc-Logomark.svg" />
+        <meta name="description" content="Starinc Official" />
+        <title>Starinc</title>
+    </head>
+    <body>
+        <!-- navbar start -->
+        <nav class="hidden h-14 w-full flex justify-center items-center absolute top-0 left-0 z-10 animate__animated animate__fadeInDown">
+            <div class="w-full">
+                <div class="flex justify-between items-center relative">
+                    <div class="w-fit pl-5 lg:pl-9 flex justify-center items-center gap-5">
+                        <a href="index.html" rel="noopener noreferrer" class="flex">
+                            <img src="./dist/images/logo/starinc-1.png" loading="lazy" alt="logo starinc text" class="h-5 w-auto">
+                        </a>
+                        <div id="nav-menu" class="hidden lg:block lg:static w-screen lg:w-full bg-white lg:bg-transparent bg-opacity-90 lg:bg-opacity-0 backdrop-blur-sm lg:backdrop-blur-0 lg:max-w-full shadow-lg lg:shadow-none            rounded-b-lg absolute top-[41px] right-0 py-2      lg:rounded-none">
+                            <ul class="flex flex-col lg:flex-row items-end lg:items-center gap-3 lg:gap-0 text-sm lg:text-xs font-medium uppercase py-5">
+                                <li class="group"><a href="about.html" rel="noopener noreferrer" class="mx-8 py-2">About</a></li>
+                                <li class="group"><a href="contact.html" rel="noopener noreferrer" class="mx-8 py-2">Contact</a></li>
+                                <li class="group"><a href="center.html" rel="noopener noreferrer" class="mx-8 py-2">Find Center</a></li>
+                                <li class="group"><a href="starpreneur.html" rel="noopener noreferrer" class="mx-8 py-2">Starpreneur</a></li>
+                                <li class="group"><a href="cart.html" rel="noopener noreferrer" class="lg:hidden mx-8 py-2">Cart (0)</a></li>
+                            
+                                <div class="lg:hidden w-full my-3 px-5">
+                                    <hr class="h-[2px] bg-pinkThird border-0 z-40 self-center">
+                                </div>
+
+                                <!-- jika belum login -->
+                                <!-- <a href="login.html" rel="noopener noreferrer" class="lg:hidden bg-gradient-primary rounded-3xl mx-8 p-[1px] text-sm text-white uppercase cursor-pointer">
+                                    <div class="h-full w-full bg-white rounded-3xl px-3 py-1">
+                                        <span class="text-gradient-primary">Login</span>
+                                    </div>
+                                </a> -->
+
+                                <!-- sudah login -->
+                                <li class="group"><a href="#" rel="noopener noreferrer" class="lg:hidden mx-8 py-2">Hi, Username</a></li>
+                                <li class="group"><a href="dashboard.html" rel="noopener noreferrer" class="lg:hidden mx-8 py-2">Riwayat Transaksi</a></li>
+                                <li class="group"><a href="login.html" rel="noopener noreferrer" class="lg:hidden mx-8 py-2">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pr-5 lg:pr-9 flex justify-center items-center gap-5 lg:gap-2">
+                        <!-- muncul kecuali pada halaman shop -->
+                        <a href="shop.html" rel="noopener noreferrer" class="bg-gradient-primary rounded-3xl mx-1 lg:mx-3 px-3 py-1 text-xs lg:text-sm text-white uppercase cursor-pointer">
+                            Shop Now
+                        </a>
+
+                        <!-- muncul jika dihalaman shop -->
+                        <!-- <button class="h-[25px] w-[25px] bg-gradient-primary rounded-full p-[3px] mr-0 lg:mr-1" onclick="showModal()">
+                            <img src="./dist/images/icon/Search.svg" alt="icon search" loading="lazy" class="w-full h-full">
+                        </button> -->
+
+                        <!-- cart icon -->
+                        <a href="cart.html" rel="noopener noreferrer" class="hidden md:block relative">
+                            <div class="h-4 w-4 bg-yellowPrimary rounded-full flex justify-center items-center text-white text-xxs truncate p-[10px] absolute -top-[10px] -right-3">
+                                28
+                            </div>
+                            <img src="./dist/images/icon/cart.svg" alt="icon cart" loading="lazy" class="w-7 h-7 cursor-pointer">
+                        </a>
+                        <div class="hidden lg:block h-full w-7">
+                            <hr class="h-[2px] w-full bg-pinkThird rotate-90 border-0 relative">
+                        </div>
+
+                        <!-- belum login -->
+                        <!-- <a href="login.html" rel="noopener noreferrer" class="hidden lg:block bg-gradient-primary rounded-3xl mx-1 p-[1px] text-sm text-white uppercase cursor-pointer">
+                            <div class="h-full w-full bg-white rounded-3xl px-3 py-1">
+                                <span class="text-gradient-primary">Login</span>
+                            </div>
+                        </a> -->
+
+                        <!-- sudah login -->
+                        <button class="hidden lg:block h-8 w-8 bg-gradient-primary rounded-full p-1 cursor-pointer" onclick="showMenu()">
+                            <img src="./dist/images/icon/User.svg" alt="" class="h-full w-full object-cover rounded-full">
+                        </button>
+
+                        <!-- menu login -->
+                        <div id="menu-profile" class="hidden bg-white rounded-2xl shadow-2xl flex flex-col text-end gap-1 py-3 px-5 absolute top-[70px] right-5">
+                            <div class="flex flex-row justify-center items-center gap-2">
+                                <div class="h-9 w-9 bg-transparent">
+                                    <img src="./dist/images/icon/Starinc-Orange.svg" loading="lazy" alt="icon starinc" class="h-full h-full">
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-sm font-semibold">Nadia Julianan Sinaga</span>
+                                    <span class="text-sm font-light text-gray-600">SC2308000001</span>
+                                </div>
+                            </div>
+                            <hr class="w-[95%] self-center mt-3 mb-3">
+                            <a href="dashboard.html" rel="noopener noreferrer" class="text-sm font-light">Dashboard</a>
+                            <a href="dashboard.html" rel="noopener noreferrer" class="text-sm font-light">Riwayat Transaksi</a>
+                            <a href="login.html" rel="noopener noreferrer" class="text-sm mt-3">Logout</a>
+                        </div>
+                        
+                        <!-- hamburger icon -->
+                        <button id="hamburger" name="hamburger" type="button" class="block lg:hidden">
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar end -->
+
+        <!-- modal edit profile -->
+        <section id="modal-edit-profile" class="hidden h-full w-screen bg-black/70 flex justify-center pt-10 pb-20 absolute top-0 bottom-0 z-50 overflow-scroll">
+            <form class="h-fit w-11/12 md:w-3/5 lg:w-1/3 bg-white rounded-xl flex flex-col justify-center items-center gap-3 md:gap-5 px-5 md:px-7 py-3 md:py-5" id="form-profile">
+                <div class="w-full flex justify-center items-center relative">
+                    <h2 class="text-center text-sm md:text-xl font-semibold">Update Profile</h2>
+                    <img src="./dist/images/icon/close.svg" loading="lazy" alt="icon close" class="h-7 md:h-10 w-7 md:w-10 absolute -right-2 cursor-pointer" id="close-modal-edit">
+                </div>
+                <div class="w-full flex flex-col gap-1 mt-3">
+                    <span class="text-sm md:text-base font-light">Nama Lengkap</span>
+                    <input type="text" name="fullname" class="h-8 md:h-9 w-full border border-grayPrimary bg-white rounded-xl focus:outline-none focus:ring-0 text-xs md:text-sm px-2">
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <span class="text-sm md:text-base font-light">Tanggal Lahir</span>
+                    <input type="date" name="birthday" class="h-8 md:h-9 w-full border border-grayPrimary bg-white rounded-xl focus:outline-none focus:ring-0 text-xs md:text-sm px-2">
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <span class="text-sm md:text-base font-light">No Whatsapp</span>
+                    <div class="h-8 md:h-10 text-xs md:text-sm border border-grayPrimary rounded-xl flex flex-row justify-start items-center pr-3 ">
+                        <span class="h-full w-[20%] md:w-[15%] bg-slate-300 rounded-s-xl flex justify-center items-center">+62</span>
+                        <input type="number" class="h-full w-full text-xs md:text-sm bg-white rounded-e-xl px-2 md:px-3 focus:outline-none focus:ring-0">
+                    </div>
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <span class="text-sm md:text-base font-light">Email</span>
+                    <input type="email" name="email" class="h-8 md:h-9 w-full border border-grayPrimary bg-white rounded-xl focus:outline-none focus:ring-0 text-xs md:text-sm px-2">
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <span class="text-sm md:text-base font-light">Old Password</span>
+                    <div class="h-8 md:h-10 text-xs md:text-sm border border-red-400 rounded-xl flex flex-row justify-between items-center pr-3 pl-1">
+                        <input type="password" class="input-password h-full w-[93%] text-xs md:text-sm bg-white rounded-xl px-2 focus:outline-none focus:ring-0">
+                        <img src="./dist/images/icon/Eye.svg" loading="lazy" alt="icon visible" class="h-4 md:h-5 w-4 md:w-5 cursor-pointer visible-password">
+                        <img src="./dist/images/icon/Invisible.svg" loading="lazy" alt="icon visible" class="hidden h-4 md:h-5 w-4 md:w-5 cursor-pointer unvisible-password">
+                    </div>
+                    <span class="text-xxs md:text-xs text-red-400 italic ml-2">Password min. 8 karakter, mengandung huruf dan angka.</span>
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <span class="text-sm md:text-base font-light">New Password</span>
+                    <div class="h-8 md:h-10 text-xs md:text-sm border border-red-400 rounded-xl flex flex-row justify-between items-center pr-3 pl-1">
+                        <input type="password" class="input-password h-full w-[93%] text-xs md:text-sm bg-white rounded-xl px-2 focus:outline-none focus:ring-0">
+                        <img src="./dist/images/icon/Eye.svg" loading="lazy" alt="icon visible" class="h-4 md:h-5 w-4 md:w-5 cursor-pointer visible-password">
+                        <img src="./dist/images/icon/Invisible.svg" loading="lazy" alt="icon visible" class="hidden h-4 md:h-5 w-4 md:w-5 cursor-pointer unvisible-password">
+                    </div>
+                    <span class="text-xxs md:text-xs text-red-400 italic ml-2">Password min. 8 karakter, mengandung huruf dan angka.</span>
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <span class="text-sm md:text-base font-light">Re-Type New Password</span>
+                    <div class="h-8 md:h-10 text-xs md:text-sm border border-red-400 rounded-xl flex flex-row justify-between items-center pr-3 pl-1">
+                        <input type="password" class="input-password h-full w-[93%] text-xs md:text-sm bg-white rounded-xl px-2 focus:outline-none focus:ring-0">
+                        <img src="./dist/images/icon/Eye.svg" loading="lazy" alt="icon visible" class="h-4 md:h-5 w-4 md:w-5 cursor-pointer visible-password">
+                        <img src="./dist/images/icon/Invisible.svg" loading="lazy" alt="icon visible" class="hidden h-4 md:h-5 w-4 md:w-5 cursor-pointer unvisible-password">
+                    </div>
+                    <span class="text-xxs md:text-xs text-red-400 italic ml-2">Password does not match.</span>
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <span class="text-sm md:text-base font-light">Verify</span>
+                    <div class="h-8 md:h-10 text-xs md:text-sm border border-slate-400 rounded-xl flex flex-row justify-between items-center pr-3 py-[1px]">
+                        <select class="h-full w-[99%] text-xs md:text-sm bg-white rounded-xl px-2 focus:outline-none focus:ring-0">
+                            <option>Verifikasi Email</option>
+                            <option>Verifikasi WhatsApp</option>
+                            <option>Verifikasi SMS</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <span class="text-sm md:text-base font-light">Update Photo</span>
+                    <input 
+                        type="file" 
+                        id="photo-profile" 
+                        onchange="previewPhoto()" 
+                        accept='.png, .jpg, .jpeg' 
+                        class="block w-full text-xs md:text-sm text-slate-500
+                                file:mr-4 file:py-2 file:px-4
+                                file:rounded-full file:border-0
+                                file:text-sm file:font-semibold
+                                file:bg-gray-100 file:text-gray-500
+                                hover:file:bg-gray-100">
+                </div>
+                <div class="hidden w-fit flex flex-col gap-1 relative">
+                    <img loading="lazy" alt="preview photo" class="photo-preview mb-4 self-center w-28 h-28 object-cover drop-shadow-lg">
+                    <img src="./dist/images/icon/Remove.svg" alt="icon remove" loading="lazy" class="remove-preview w-7 absolute -right-10 top-0">
+                </div>
+                <div class="w-full flex flex-col justify-center items-center gap-1 mt-4 mb-3">
+                    <button class="bg-gradient-primary rounded-3xl text-sm md:text-base text-white px-5 md:px-7 py-1 md:py-2">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- modal add/update address -->
+        <section id="modal-add" class="hidden h-full w-screen bg-black/70 flex justify-center pt-10 pb-20 absolute top-0 bottom-0 z-50 overflow-scroll">
+            <form class="h-fit w-11/12 md:w-3/5 lg:w-1/3 bg-white rounded-xl flex flex-col justify-center items-center gap-3 md:gap-5 px-5 md:px-7 py-3 md:py-5" id="form-address">
+                <div class="w-full flex justify-center items-center relative">
+                    <h2 class="text-center text-sm md:text-xl font-semibold">Tambah/Update Alamat</h2>
+                    <img src="./dist/images/icon/close.svg" loading="lazy" alt="icon close" class="h-7 md:h-10 w-7 md:w-10 absolute -right-2 cursor-pointer" id="close-modal-add">
+                </div>
+                <div class="w-full flex flex-col gap-1 mt-3">
+                    <span class="text-sm md:text-base font-light">Provinsi</span>
+                    <div class="h-8 md:h-9 w-full text-sm border border-grayPrimary rounded-xl flex flex-row justify-between items-center pr-3">
+                        <select class="h-full w-[99%] text-xs md:text-sm italic bg-white rounded-xl px-2 focus:outline-none focus:ring-0">
+                            <option>Pilih Provinsi</option>
+                            <option>DKI Jakarta</option>
+                            <option>Jawa Barat</option>
+                            <option>Jawa Tengah</option>
+                            <option>Jawa Timur</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <span class="text-sm md:text-base font-light">Kota/Kabupaten</span>
+                    <div class="h-8 md:h-9 w-full text-sm border border-grayPrimary rounded-xl flex flex-row justify-between items-center pr-3">
+                        <select class="h-full w-[99%] text-xs md:text-sm italic bg-white rounded-xl px-2 focus:outline-none focus:ring-0">
+                            <option>Pilih Kota/Kabupaten</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <span class="text-sm md:text-base font-light">Kecamatan</span>
+                    <div class="h-8 md:h-9 w-full text-sm border border-grayPrimary rounded-xl flex flex-row justify-between items-center pr-3">
+                        <select class="h-full w-[99%] text-xs md:text-sm italic bg-white rounded-xl px-2 focus:outline-none focus:ring-0">
+                            <option>Pilih Kecamatan</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <span class="text-sm md:text-base font-light">Kode Pos</span>
+                    <input type="text" name="kode_pos" class="h-8 md:h-9 w-full border border-grayPrimary bg-white rounded-xl focus:outline-none focus:ring-0 text-xs md:text-sm px-2">
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <span class="text-sm md:text-base font-light">Alamat</span>
+                    <textarea cols="30" rows="5" class="w-full border border-grayPrimary bg-white rounded-xl focus:outline-none focus:ring-0 text-xs md:text-sm px-2 py-1"></textarea>
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <span class="text-sm md:text-base font-light">Nama Penerima</span>
+                    <input type="text" name="provinsi" class="h-8 md:h-9 w-full border border-grayPrimary bg-white rounded-xl focus:outline-none focus:ring-0 text-xs md:text-sm px-2">
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <span class="text-sm md:text-base font-light">No Whatsapp</span>
+                    <div class="h-8 md:h-10 text-xs md:text-sm border border-grayPrimary rounded-xl flex flex-row justify-start items-center pr-3 ">
+                        <span class="h-full w-[20%] md:w-[15%] bg-slate-300 rounded-s-xl flex justify-center items-center">+62</span>
+                        <input type="number" class="h-full w-full text-xs md:text-sm bg-white rounded-e-xl px-2 md:px-3 focus:outline-none focus:ring-0">
+                    </div>
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <span class="text-sm md:text-base font-light">Keterangan</span>
+                    <textarea cols="30" rows="3" class="w-full border border-grayPrimary bg-white rounded-xl focus:outline-none focus:ring-0 text-xs md:text-sm px-2 py-1"></textarea>
+                </div>
+                <div class="h-[25vh] w-full flex flex-col gap-1">
+                    <iframe class="border-2 border-white shadow-lg rounded-md" aria-hidden="false" frameborder="0" tabindex="-1" src="https://www.google.com/maps?q=Jalan Ngagel Madya No. 17-21 Ngagel Wonokromo, Baratajaya, Kec. Gubeng, Surabaya, Jawa Timur 60284, Gubeng, Surabaya&amp;output=embed" class="map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%; height:100%;"></iframe>
+                </div>
+                <div class="w-full flex flex-col justify-center items-center gap-1 mt-4 mb-3">
+                    <button class="bg-gradient-primary rounded-3xl text-sm md:text-base text-white px-5 md:px-7 py-1 md:py-2">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- main start -->
+        <main id="home">
+            <!-- section start -->
+            <section class="mt-10 lg:mt-16 mb-20">
+                <div class="min-h-[70vh] w-full flex flex-col justify-start items-center gap-10 lg:gap-12 relative overflow-hidden">
+                    <div class="w-11/12 md:w-3/5 lg:w-1/2 bg-gradient-primary rounded-md p-[2px]">
+                        <div class="h-full w-full bg-white rounded-md flex flex-row justify-center items-start gap-3 px-4 md:px-5 py-4">
+                            <div class="w-[25%] md:w-[20%] flex justify-center items-center">
+                                <div class="h-16 md:h-20 lg:h-28 w-16 md:w-20 lg:w-28 rounded-full bg-slate-300">
+                                    <img src="./dist/images/dashboard-assets/User.jpg" loading="lazy" alt="user profile" class="h-full w-full rounded-full object-cover">
+                                </div>
+                            </div>
+                            <div class="w-[75%] md:w-[80%] flex flex-col">
+                                <div class="flex flex-row flex-wrap gap-1">
+                                    <span class="text-sm md:text-base font-medium tracking-wider break-all">Maria Angelina Putri Melina</span>
+                                    <span class="text-xs md:text-sm text-gray-600 font-light mb-2">(ID: EC2309000003)</span>
+                                </div>
+                                <!-- starpreneur -->
+                                <div class="w-fit bg-gradient-fifth rounded flex flex-row gap-2 mt-2 px-2 py-1">
+                                    <img src="./dist/images/icon/favicon-starinc-white.svg" loading="lazy" alt="icon star" class="h-4 md:h-5 w-4 md:w-5">
+                                    <span class="text-xs md:text-sm text-white tracking-wide uppercase">Starpreneur</span>
+                                </div>
+                                <!-- center -->
+                                <!-- <div class="w-fit bg-gradient-sixth rounded flex flex-row gap-2 mt-2 px-2 py-1">
+                                    <img src="./dist/images/icon/favicon-starinc-white.svg" loading="lazy" alt="icon star" class="h-4 md:h-5 w-4 md:w-5">
+                                    <span class="text-xs md:text-sm text-white tracking-wide uppercase">Star Center</span>
+                                </div> -->
+                                <div class="flex flex-col lg:flex-row justify-between">
+                                    <div class="w-full lg:w-[80%]">
+                                        <div class="flex flex-row gap-1 mt-5">
+                                            <img src="./dist/images/icon/WhatsApp-Gray.svg" loading="lazy" alt="icon whatsapp" class="h-5 w-5">
+                                            <span class="text-sm font-light">+62 0812 9980 2233</span>
+                                        </div>
+                                        <div class="flex flex-row gap-1">
+                                            <img src="./dist/images/icon/Letter-Gray.svg" loading="lazy" alt="icon email" class="h-5 w-5">
+                                            <span class="text-sm font-light">mariaangel@gmail.com</span>
+                                        </div>
+                                    </div>
+                                    <div class="w-full lg:w-[20%] flex flex-row justify-end self-end mt-3 md:mt-0">
+                                        <button onclick="showEditProfile()" class="w-fit rounded-lg border border-red-500 text-xxs md:text-xs text-red-500 font-light tracking-wider italic px-3 md:px-4 py-1 md:py-2">Edit Profile</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-menus w-full text-white text-xs md:text-sm font-normal flex flex-row justify-start md:justify-center items-center gap-3 px-5 overflow-auto" data-aos="fade-up">
+                        <button class="button-dashboard bg-gradient-forth rounded-xl cursor-pointer flex-shrink-0 py-2 px-4 lg:px-5">
+                            My Wallet
+                        </button>
+                        <button class="button-dashboard bg-gradient-forth rounded-xl cursor-pointer flex-shrink-0 py-2 px-4 lg:px-5">
+                            Address List
+                        </button>
+                        <button class="button-dashboard bg-gradient-forth rounded-xl cursor-pointer flex-shrink-0 py-2 px-4 lg:px-5">
+                            Transaction History
+                        </button>
+                        <button class="button-dashboard bg-gradient-forth rounded-xl cursor-pointer flex-shrink-0 py-2 px-4 lg:px-5">
+                            Notification
+                        </button>
+                    </div>
+
+                    <div class="w-full flex" data-aos="fade-up" data-aos-delay="50">
+                        <!-- wallet -->
+                        <div class="hidden dashboard-content w-full flex flex-col items-center">
+                            <div class="w-11/12 md:w-3/4 lg:w-1/2 card-dashboard flex flex-col justify-center items-center gap-1 py-3">
+                                <span class="text-lg font-light tracking-wide">My Balance</span>
+                                <h1 class="text-2xl font-bold">Rp. 142.000.000</h1>
+                            </div>
+                            <div class="w-11/12 md:w-3/4 lg:w-1/2 flex flex-col gap-3 py-3 mt-10">
+                                <!-- card bonus -->
+                                <div class="w-full card-dashboard flex flex-row justify-between items-center gap-1 py-3 px-5 md:px-10 cursor-pointer">
+                                    <div class="flex flex-col justify-center">
+                                        <h5 class="text-sm md:text-base">19 September 2023</h5>
+                                        <span class="text-xs md:text-sm text-gray-500">INV/20230911/MPL/3451963280</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center text-center">
+                                        <small class="text-xxs md:text-xs text-gray-500">Bonus</small>
+                                        <h3 class="text-sm md:text-base font-semibold">Rp. 365.000</h3>
+                                    </div>
+                                </div>
+                                <!-- card bonus -->
+                                <div class="w-full card-dashboard flex flex-row justify-between items-center gap-1 py-3 px-5 md:px-10 cursor-pointer">
+                                    <div class="flex flex-col justify-center">
+                                        <h5 class="text-sm md:text-base">17 September 2023</h5>
+                                        <span class="text-xs md:text-sm text-gray-500">INV/20230911/MPL/3351233280</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center text-center">
+                                        <small class="text-xxs md:text-xs text-gray-500">Bonus</small>
+                                        <h3 class="text-sm md:text-base font-semibold">Rp. 405.000</h3>
+                                    </div>
+                                </div>
+                                <!-- card bonus -->
+                                <div class="w-full card-dashboard flex flex-row justify-between items-center gap-1 py-3 px-5 md:px-10 cursor-pointer">
+                                    <div class="flex flex-col justify-center">
+                                        <h5 class="text-sm md:text-base">10 September 2023</h5>
+                                        <span class="text-xs md:text-sm text-gray-500">INV/20230910/MPL/25196434280</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center text-center">
+                                        <small class="text-xxs md:text-xs text-gray-500">Bonus</small>
+                                        <h3 class="text-sm md:text-base font-semibold">Rp. 35.000</h3>
+                                    </div>
+                                </div>
+                                <!-- card bonus -->
+                                <div class="w-full card-dashboard flex flex-row justify-between items-center gap-1 py-3 px-5 md:px-10 cursor-pointer">
+                                    <div class="flex flex-col justify-center">
+                                        <h5 class="text-sm md:text-base">7 September 2023</h5>
+                                        <span class="text-xs md:text-sm text-gray-500">INV/20230907/MPL/3121963380</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center text-center">
+                                        <small class="text-xxs md:text-xs text-gray-500">Bonus</small>
+                                        <h3 class="text-sm md:text-base font-semibold">Rp. 30.000</h3>
+                                    </div>
+                                </div>
+                                <!-- card bonus -->
+                                <div class="w-full card-dashboard flex flex-row justify-between items-center gap-1 py-3 px-5 md:px-10">
+                                    <div class="flex flex-col justify-center">
+                                        <h5 class="text-sm md:text-base">5 September 2023</h5>
+                                        <span class="text-xs md:text-sm text-gray-500">INV/20230905/MPL/3451215298</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center text-center">
+                                        <small class="text-xxs md:text-xs text-gray-500">Bonus</small>
+                                        <h3 class="text-sm md:text-base font-semibold">Rp. 5.000</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center text-xs mt-5">
+                                <span class="italic">Pagination jika ada</span>
+                            </div>
+                        </div>
+
+                        <!-- address -->
+                        <div class="hidden dashboard-content w-full flex flex-col items-center">
+                            <div class="w-11/12 md:w-3/4 lg:w-1/2 flex flex-col gap-3 py-3">
+                                <button class="flex justify-center items-center gap-1 md:gap-2 mb-5" onclick="addModal()">
+                                    <img src="./dist/images/icon/Add-Red.svg" loading="lazy" alt="icon add" class="h-4 md:h-5 w-4 md:w-5">
+                                    <span class="text-xs md:text-sm text-red-400 font-light italic self-center cursor-pointer">Add Address</span>
+                                </button>
+                                <!-- card alamat -->
+                                <div class="w-full card-dashboard flex flex-col gap-5 cursor-pointer py-3 px-5 md:px-10">
+                                    <div class="card-address flex flex-row justify-between items-center gap-1">
+                                        <div class="w-4/5 md:w-full flex flex-col justify-center text-xxs md:text-xs text-gray-500">
+                                            <span class="text-xs md:text-sm text-black">Maria Angelina</span>
+                                            <span>+62 8123 4545 678</span>
+                                            <span class="break-after-all">Jl. Indragiri No.12-18, Blk. A No.17 Kec. Wonokromo, Surabaya, Jawa Timur 60241,</span>
+                                        </div>
+                                        <!-- <div class="flex flex-col justify-center items-center text-center">
+                                            <small class="text-xxs md:text-xs text-red-500 italic underline">Default</small>
+                                        </div> -->
+                                    </div>
+                                    <div class="hidden menu-address flex flex-col justify-center items-center gap-3 md:gap-5">
+                                        <hr class="w-full">
+                                        <div class="w-full flex flex-row flex-wrap justify-center items-center gap-3">
+                                            <div class="bg-blueThird/50 rounded-md flex justify-center items-center text-xs font-light capitalize px-4 py-1">Delete</div>
+                                            <button onclick="addModal()" class="bg-blueThird/50 rounded-md flex justify-center items-center text-xs font-light capitalize px-4 py-1">Edit</button>
+                                            <div class="bg-blueThird/50 rounded-md flex justify-center items-center text-xs font-light capitalize px-4 py-1">Make Default</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card alamat -->
+                                <div class="w-full card-dashboard flex flex-col gap-5 cursor-pointer py-3 px-5 md:px-10">
+                                    <div class="card-address flex flex-row justify-between items-center gap-1">
+                                        <div class="w-4/5 md:w-full flex flex-col justify-center text-xxs md:text-xs text-gray-500">
+                                            <span class="text-xs md:text-sm text-black">Maria Angelina</span>
+                                            <span>+62 8123 4545 678</span>
+                                            <span class="break-after-all">Jl. Indragiri No.12-18, Blk. A No.17 Kec. Wonokromo, Surabaya, Jawa Timur 60241,</span>
+                                        </div>
+                                        <div class="flex flex-col justify-center items-center text-center">
+                                            <small class="text-xxs md:text-xs text-red-500 italic underline">Default</small>
+                                        </div>
+                                    </div>
+                                    <div class="hidden menu-address flex flex-col justify-center items-center gap-3 md:gap-5">
+                                        <hr class="w-full">
+                                        <div class="w-full flex flex-row flex-wrap justify-center items-center gap-3">
+                                            <div class="bg-blueThird/50 rounded-md flex justify-center items-center text-xs font-light capitalize px-4 py-1">Delete</div>
+                                            <button onclick="addModal()" class="bg-blueThird/50 rounded-md flex justify-center items-center text-xs font-light capitalize px-4 py-1">Edit</button>
+                                            <div class="bg-blueThird/50 rounded-md flex justify-center items-center text-xs font-light capitalize px-4 py-1">Make Default</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card alamat -->
+                                <div class="w-full card-dashboard flex flex-col gap-5 cursor-pointer py-3 px-5 md:px-10">
+                                    <div class="card-address flex flex-row justify-between items-center gap-1">
+                                        <div class="w-4/5 md:w-full flex flex-col justify-center text-xxs md:text-xs text-gray-500">
+                                            <span class="text-xs md:text-sm text-black">Maria Angelina</span>
+                                            <span>+62 8123 4545 678</span>
+                                            <span class="break-after-all">Jl. Indragiri No.12-18, Blk. A No.17 Kec. Wonokromo, Surabaya, Jawa Timur 60241,</span>
+                                        </div>
+                                        <!-- <div class="flex flex-col justify-center items-center text-center">
+                                            <small class="text-xxs md:text-xs text-red-500 italic underline">Default</small>
+                                        </div> -->
+                                    </div>
+                                    <div class="hidden menu-address flex flex-col justify-center items-center gap-3 md:gap-5">
+                                        <hr class="w-full">
+                                        <div class="w-full flex flex-row flex-wrap justify-center items-center gap-3">
+                                            <div class="bg-blueThird/50 rounded-md flex justify-center items-center text-xs font-light capitalize px-4 py-1">Delete</div>
+                                            <button onclick="addModal()" class="bg-blueThird/50 rounded-md flex justify-center items-center text-xs font-light capitalize px-4 py-1">Edit</button>
+                                            <div class="bg-blueThird/50 rounded-md flex justify-center items-center text-xs font-light capitalize px-4 py-1">Make Default</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-center text-xs mt-5">
+                                    <span class="italic">Pagination jika ada</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- transactions -->
+                        <div class="hidden dashboard-content w-full flex flex-col items-center">
+                            <div class="w-11/12 md:w-3/4 lg:w-1/2 flex flex-col gap-3 py-3">
+                                <!-- card transaction -->
+                                <a href="transaction.html" rel="noopener noreferrer" class="w-full card-dashboard flex flex-col md:flex-row items-center gap-3 md:gap-5 py-3 px-4 md:px-7 cursor-pointer">
+                                    <div class="w-full md:w-3/4 flex flex-col-reverse lg:flex-row gap-1 lg:gap-7">
+                                        <div class="flex flex-col gap-1">
+                                            <div class="flex flex-col md:flex-row md:items-center gap-0 md:gap-2">
+                                                <span class="text-sm">10 September 2023</span>
+                                                <small class="text-xs text-gray-500 font-light tracking-wide">INV/20230911/MPL/3451963280</small>
+                                            </div>
+                                            <div class="flex flex-row items-center gap-1 mt-2 md:mt-0">
+                                                <div class="h-5 w-5 bg-black rounded-full p-1">
+                                                    <img src="./dist/images/icon/center.svg" loading="lazy" alt="icon center" class="h-full w-full object-contain">
+                                                </div>
+                                                <span class="text-sm uppercase tracking-wide">starinc official surabaya</span>
+                                            </div>
+                                        </div>
+                                        <div class="h-fit w-fit bg-[#FFC800] rounded flex justify-center items-center text-xs font-light px-3 capitalize">
+                                            Pesanan diproses
+                                        </div>
+                                        <!-- <div class="h-fit w-fit bg-[#00A3FF] rounded flex justify-center items-center text-xs text-white font-light px-3 capitalize">
+                                            Pesanan dikirim
+                                        </div>
+                                        <div class="h-fit w-fit bg-white flex justify-center items-center gap-1 text-xs text-red-500 font-light capitalize">
+                                            <div class="h-4 w-4 bg-[#D00000] rounded-full flex justify-center items-center text-white font-bold p-[1px]">
+                                                !
+                                            </div>
+                                            Belum dibayar
+                                        </div>
+                                        <div class="h-fit w-fit bg-[#D00000] rounded flex justify-center items-center text-xs text-white font-light px-3 capitalize">
+                                            Dibatalkan
+                                        </div>
+                                        <div class="h-fit w-fit bg-[#00A341] rounded flex justify-center items-center text-xs text-white font-light px-3 capitalize">
+                                            Selesai
+                                        </div> -->
+                                    </div>
+                                    <div class="w-full md:w-1/4 h-full flex flex-row md:flex-col justify-end md:justify-center lg:justify-start items-center">
+                                        <div class="flex flex-col justify-center items-center text-center">
+                                            <small class="text-xxs md:text-xs text-gray-500">Total Belanja</small>
+                                            <h3 class="text-sm md:text-base font-semibold">Rp. 365.000</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- card transaction -->
+                                <a href="transaction.html" rel="noopener noreferrer" class="w-full card-dashboard flex flex-col md:flex-row items-center gap-3 md:gap-5 py-3 px-4 md:px-7 cursor-pointer">
+                                    <div class="w-full md:w-3/4 flex flex-col-reverse lg:flex-row gap-1 lg:gap-7">
+                                        <div class="flex flex-col gap-1">
+                                            <div class="flex flex-col md:flex-row md:items-center gap-0 md:gap-2">
+                                                <span class="text-sm">10 September 2023</span>
+                                                <small class="text-xs text-gray-500 font-light tracking-wide">INV/20230911/MPL/3451963280</small>
+                                            </div>
+                                            <div class="flex flex-row items-center gap-1 mt-2 md:mt-0">
+                                                <div class="h-5 w-5 bg-black rounded-full p-1">
+                                                    <img src="./dist/images/icon/center.svg" loading="lazy" alt="icon center" class="h-full w-full object-contain">
+                                                </div>
+                                                <span class="text-sm uppercase tracking-wide">starinc official surabaya</span>
+                                            </div>
+                                        </div>
+                                        <div class="h-fit w-fit bg-[#00A3FF] rounded flex justify-center items-center text-xs text-white font-light px-3 capitalize">
+                                            Pesanan dikirim
+                                        </div>
+                                        <!-- <div class="h-fit w-fit bg-[#FFC800] rounded flex justify-center items-center text-xs font-light px-3 capitalize">
+                                            Pesanan diproses
+                                        </div>
+                                        <div class="h-fit w-fit bg-white flex justify-center items-center gap-1 text-xs text-red-500 font-light capitalize">
+                                            <div class="h-4 w-4 bg-[#D00000] rounded-full flex justify-center items-center text-white font-bold p-[1px]">
+                                                !
+                                            </div>
+                                            Belum dibayar
+                                        </div>
+                                        <div class="h-fit w-fit bg-[#D00000] rounded flex justify-center items-center text-xs text-white font-light px-3 capitalize">
+                                            Dibatalkan
+                                        </div>
+                                        <div class="h-fit w-fit bg-[#00A341] rounded flex justify-center items-center text-xs text-white font-light px-3 capitalize">
+                                            Selesai
+                                        </div> -->
+                                    </div>
+                                    <div class="w-full md:w-1/4 h-full flex flex-row md:flex-col justify-end md:justify-center lg:justify-start items-center">
+                                        <div class="flex flex-col justify-center items-center text-center">
+                                            <small class="text-xxs md:text-xs text-gray-500">Total Belanja</small>
+                                            <h3 class="text-sm md:text-base font-semibold">Rp. 365.000</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- card transaction -->
+                                <a href="transaction.html" rel="noopener noreferrer" class="w-full card-dashboard flex flex-col md:flex-row items-center gap-3 md:gap-5 py-3 px-4 md:px-7 cursor-pointer">
+                                    <div class="w-full md:w-3/4 flex flex-col-reverse lg:flex-row gap-1 lg:gap-7">
+                                        <div class="flex flex-col gap-1">
+                                            <div class="flex flex-col md:flex-row md:items-center gap-0 md:gap-2">
+                                                <span class="text-sm">10 September 2023</span>
+                                                <small class="text-xs text-gray-500 font-light tracking-wide">INV/20230911/MPL/3451963280</small>
+                                            </div>
+                                            <div class="flex flex-row items-center gap-1 mt-2 md:mt-0">
+                                                <div class="h-5 w-5 bg-black rounded-full p-1">
+                                                    <img src="./dist/images/icon/center.svg" loading="lazy" alt="icon center" class="h-full w-full object-contain">
+                                                </div>
+                                                <span class="text-sm uppercase tracking-wide">starinc official surabaya</span>
+                                            </div>
+                                        </div>
+                                        <div class="h-fit w-fit bg-[#D00000] rounded flex justify-center items-center text-xs text-white font-light px-3 capitalize">
+                                            Dibatalkan
+                                        </div>
+                                        <!-- <div class="h-fit w-fit bg-white flex justify-center items-center gap-1 text-xs text-red-500 font-light capitalize">
+                                            <div class="h-4 w-4 bg-[#D00000] rounded-full flex justify-center items-center text-white font-bold p-[1px]">
+                                                !
+                                            </div>
+                                            Belum dibayar
+                                        </div>
+                                        <div class="h-fit w-fit bg-[#00A341] rounded flex justify-center items-center text-xs text-white font-light px-3 capitalize">
+                                            Selesai
+                                        </div>
+                                        <div class="h-fit w-fit bg-[#FFC800] rounded flex justify-center items-center text-xs font-light px-3 capitalize">
+                                            Pesanan diproses
+                                        </div>
+                                        <div class="h-fit w-fit bg-[#00A3FF] rounded flex justify-center items-center text-xs text-white font-light px-3 capitalize">
+                                            Pesanan dikirim
+                                        </div> -->
+                                    </div>
+                                    <div class="w-full md:w-1/4 h-full flex flex-row md:flex-col justify-end md:justify-center lg:justify-start items-center">
+                                        <div class="flex flex-col justify-center items-center text-center">
+                                            <small class="text-xxs md:text-xs text-gray-500">Total Belanja</small>
+                                            <h3 class="text-sm md:text-base font-semibold">Rp. 365.000</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- card transaction -->
+                                <a href="transaction.html" rel="noopener noreferrer" class="w-full card-dashboard flex flex-col md:flex-row items-center gap-3 md:gap-5 py-3 px-4 md:px-7 cursor-pointer">
+                                    <div class="w-full md:w-3/4 flex flex-col-reverse lg:flex-row gap-1 lg:gap-7">
+                                        <div class="flex flex-col gap-1">
+                                            <div class="flex flex-col md:flex-row md:items-center gap-0 md:gap-2">
+                                                <span class="text-sm">10 September 2023</span>
+                                                <small class="text-xs text-gray-500 font-light tracking-wide">INV/20230911/MPL/3451963280</small>
+                                            </div>
+                                            <div class="flex flex-row items-center gap-1 mt-2 md:mt-0">
+                                                <div class="h-5 w-5 bg-black rounded-full p-1">
+                                                    <img src="./dist/images/icon/center.svg" loading="lazy" alt="icon center" class="h-full w-full object-contain">
+                                                </div>
+                                                <span class="text-sm uppercase tracking-wide">starinc official surabaya</span>
+                                            </div>
+                                        </div>
+                                        <div class="h-fit w-fit bg-white flex justify-center items-center gap-1 text-xs text-red-500 font-light capitalize">
+                                            <div class="h-4 w-4 bg-[#D00000] rounded-full flex justify-center items-center text-white font-bold p-[1px]">
+                                                !
+                                            </div>
+                                            Belum dibayar
+                                        </div>
+                                        <!-- <div class="h-fit w-fit bg-[#00A341] rounded flex justify-center items-center text-xs text-white font-light px-3 capitalize">
+                                            Selesai
+                                        </div>
+                                        <div class="h-fit w-fit bg-[#FFC800] rounded flex justify-center items-center text-xs font-light px-3 capitalize">
+                                            Pesanan diproses
+                                        </div>
+                                        <div class="h-fit w-fit bg-[#00A3FF] rounded flex justify-center items-center text-xs text-white font-light px-3 capitalize">
+                                            Pesanan dikirim
+                                        </div>
+                                        <div class="h-fit w-fit bg-[#D00000] rounded flex justify-center items-center text-xs text-white font-light px-3 capitalize">
+                                            Dibatalkan
+                                        </div> -->
+                                    </div>
+                                    <div class="w-full md:w-1/4 h-full flex flex-row md:flex-col justify-end md:justify-center lg:justify-start items-center">
+                                        <div class="flex flex-col justify-center items-center text-center">
+                                            <small class="text-xxs md:text-xs text-gray-500">Total Belanja</small>
+                                            <h3 class="text-sm md:text-base font-semibold">Rp. 365.000</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- card transaction -->
+                                <a href="transaction.html" rel="noopener noreferrer" class="w-full card-dashboard flex flex-col md:flex-row items-center gap-3 md:gap-5 py-3 px-4 md:px-7 cursor-pointer">
+                                    <div class="w-full md:w-3/4 flex flex-col-reverse lg:flex-row gap-1 lg:gap-7">
+                                        <div class="flex flex-col gap-1">
+                                            <div class="flex flex-col md:flex-row md:items-center gap-0 md:gap-2">
+                                                <span class="text-sm">10 September 2023</span>
+                                                <small class="text-xs text-gray-500 font-light tracking-wide">INV/20230911/MPL/3451963280</small>
+                                            </div>
+                                            <div class="flex flex-row items-center gap-1 mt-2 md:mt-0">
+                                                <div class="h-5 w-5 bg-black rounded-full p-1">
+                                                    <img src="./dist/images/icon/center.svg" loading="lazy" alt="icon center" class="h-full w-full object-contain">
+                                                </div>
+                                                <span class="text-sm uppercase tracking-wide">starinc official surabaya</span>
+                                            </div>
+                                        </div>
+                                        <div class="h-fit w-fit bg-[#00A341] rounded flex justify-center items-center text-xs text-white font-light px-3 capitalize">
+                                            Selesai
+                                        </div>
+                                        <!-- <div class="h-fit w-fit bg-[#FFC800] rounded flex justify-center items-center text-xs font-light px-3 capitalize">
+                                            Pesanan diproses
+                                        </div>
+                                        <div class="h-fit w-fit bg-[#00A3FF] rounded flex justify-center items-center text-xs text-white font-light px-3 capitalize">
+                                            Pesanan dikirim
+                                        </div>
+                                        <div class="h-fit w-fit bg-white flex justify-center items-center gap-1 text-xs text-red-500 font-light capitalize">
+                                            <div class="h-4 w-4 bg-[#D00000] rounded-full flex justify-center items-center text-white font-bold p-[1px]">
+                                                !
+                                            </div>
+                                            Belum dibayar
+                                        </div>
+                                        <div class="h-fit w-fit bg-[#D00000] rounded flex justify-center items-center text-xs text-white font-light px-3 capitalize">
+                                            Dibatalkan
+                                        </div> -->
+                                    </div>
+                                    <div class="w-full md:w-1/4 h-full flex flex-row md:flex-col justify-end md:justify-center lg:justify-start items-center">
+                                        <div class="flex flex-col justify-center items-center text-center">
+                                            <small class="text-xxs md:text-xs text-gray-500">Total Belanja</small>
+                                            <h3 class="text-sm md:text-base font-semibold">Rp. 365.000</h3>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="text-center text-xs mt-5">
+                                    <span class="italic">Pagination jika ada</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- notifications -->
+                        <div class="hidden dashboard-content w-full flex flex-col items-center">
+                            <div class="w-11/12 md:w-3/4 lg:w-1/2 flex flex-col gap-3 py-3">
+                                <!-- card notification -->
+                                <div class="w-full card-dashboard flex flex-col lg:flex-row items-center gap-3 md:gap-0 lg:gap-5 py-3 px-4 lg:px-7">
+                                    <div class="w-full lg:w-1/4 h-full flex flex-row lg:flex-col justify-start gap-5 lg:gap-0 italic">
+                                        <span class="text-xs md:text-sm text-gray-500">10 September 2023</span>
+                                        <span class="text-xs md:text-sm text-gray-500">10:13 WIB</span>
+                                    </div>
+                                    <div class="w-full lg:w-3/4">
+                                        <p class="text-xs md:text-sm">
+                                            Pesanan anda TRANS-230911030 berhasil di terima, segera melakukan pembayaran (Jika Belum)
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- card notification -->
+                                <div class="w-full card-dashboard flex flex-col lg:flex-row items-center gap-3 md:gap-0 lg:gap-5 py-3 px-4 lg:px-7">
+                                    <div class="w-full lg:w-1/4 h-full flex flex-row lg:flex-col justify-start gap-5 lg:gap-0 italic">
+                                        <span class="text-xs md:text-sm text-gray-500">10 September 2023</span>
+                                        <span class="text-xs md:text-sm text-gray-500">10:13 WIB</span>
+                                    </div>
+                                    <div class="w-full lg:w-3/4">
+                                        <p class="text-xs md:text-sm">
+                                            Pesanan Anda TRANS-230911028 sudah dikirim
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- card notification -->
+                                <div class="w-full card-dashboard flex flex-col lg:flex-row items-center gap-3 md:gap-0 lg:gap-5 py-3 px-4 lg:px-7">
+                                    <div class="w-full lg:w-1/4 h-full flex flex-row lg:flex-col justify-start gap-5 lg:gap-0 italic">
+                                        <span class="text-xs md:text-sm text-gray-500">10 September 2023</span>
+                                        <span class="text-xs md:text-sm text-gray-500">10:13 WIB</span>
+                                    </div>
+                                    <div class="w-full lg:w-3/4">
+                                        <p class="text-xs md:text-sm">
+                                            Anda mendapatkan point atas transaksi TRANS-230911029
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- card notification -->
+                                <div class="w-full card-dashboard flex flex-col lg:flex-row items-center gap-3 md:gap-0 lg:gap-5 py-3 px-4 lg:px-7">
+                                    <div class="w-full lg:w-1/4 h-full flex flex-row lg:flex-col justify-start gap-5 lg:gap-0 italic">
+                                        <span class="text-xs md:text-sm text-gray-500">10 September 2023</span>
+                                        <span class="text-xs md:text-sm text-gray-500">10:13 WIB</span>
+                                    </div>
+                                    <div class="w-full lg:w-3/4">
+                                        <p class="text-xs md:text-sm">
+                                            Pesanan anda TRANS-230911030 berhasil di terima, segera melakukan pembayaran (Jika Belum)
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- card notification -->
+                                <div class="w-full card-dashboard flex flex-col lg:flex-row items-center gap-3 md:gap-0 lg:gap-5 py-3 px-4 lg:px-7">
+                                    <div class="w-full lg:w-1/4 h-full flex flex-row lg:flex-col justify-start gap-5 lg:gap-0 italic">
+                                        <span class="text-xs md:text-sm text-gray-500">10 September 2023</span>
+                                        <span class="text-xs md:text-sm text-gray-500">10:13 WIB</span>
+                                    </div>
+                                    <div class="w-full lg:w-3/4">
+                                        <p class="text-xs md:text-sm">
+                                            Pesanan anda TRANS-230911029 berhasil di terima, segera melakukan pembayaran
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- card notification -->
+                                <div class="w-full card-dashboard flex flex-col lg:flex-row items-center gap-3 md:gap-0 lg:gap-5 py-3 px-4 lg:px-7">
+                                    <div class="w-full lg:w-1/4 h-full flex flex-row lg:flex-col justify-start gap-5 lg:gap-0 italic">
+                                        <span class="text-xs md:text-sm text-gray-500">10 September 2023</span>
+                                        <span class="text-xs md:text-sm text-gray-500">10:13 WIB</span>
+                                    </div>
+                                    <div class="w-full lg:w-3/4">
+                                        <p class="text-xs md:text-sm">
+                                            Anda mendapatkan point atas transaksi TRANS-230911028
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="text-center text-xs mt-5">
+                                    <span class="italic">Pagination jika ada</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden lg:block h-[557px] w-[557px] bg-pinkSecondary rounded-full absolute -top-12 -left-[510px] z-20"></div>
+                    <div class="hidden lg:block h-[557px] w-[557px] bg-blueSecondary rounded-full absolute -top-12 -right-[510px]"></div>
+                </div>
+            </section>
+            <!-- section end -->
+        </main>
+        
+        <!-- footer start -->
+        <footer class="h-64 lg:h-52 overflow-y-hidden">
+            <!-- footer content -->
+            <div class="h-64 lg:h-52 w-full flex flex-col lg:flex-row justify-start lg:justify-between items-start background-glasses py-5 px-7 lg:px-9 absolute z-20">
+                <div class="w-full md:w-2/5 flex flex-col gap-1 mt-0 lg:mt-4">
+                    <div class="flex flex-row gap-2">
+                        <h3 class="mb-1 lg:mb-3 text-sm font-semibold uppercase">Contact Us</h3>
+                        <img src="./dist/images/icon/Sort Up.svg" loading="lazy" alt="icon sort" id="arrow1" class="lg:hidden h-4 cursor-pointer">
+                    </div>
+                    <div class="flex flex-col" id="menu1">
+                        <div class="flex flex-row items-start lg:items-center gap-1">
+                            <img src="./dist/images/icon/Location.svg" alt="icon location" loading="lazy" class="w-3 h-3 mt-[1px]">
+                            <span class="text-xs font-light">Perumahan Heavenland Park BB-26, Lingkar Timur, Sidoarjo</span>
+                        </div>
+                        <div class="flex flex-row items-start lg:items-center gap-1">
+                            <img src="./dist/images/icon/WhatsApp.svg" alt="icon whatsapp" loading="lazy" class="w-3 h-3">
+                            <span class="text-xs font-light">+62-823-3201-7480</span>
+                        </div>
+                        <div class="flex flex-row items-start lg:items-center gap-1">
+                            <img src="./dist/images/icon/Letter.svg" alt="icon email" loading="lazy" class="w-3 h-3">
+                            <span class="text-xs font-light">contact@starinc.id</span>
+                        </div>
+                    </div>
+                    <div class="h-9 w-fit bg-white flex flex-row items-start mt-2 absolute bottom-0 right-0 lg:right-auto overflow-hidden">
+                        <select class="bg-white text-xs font-light focus:outline-none focus:ring-0 py-1 px-2">
+                            <option>Indonesia</option>
+                            <option>English</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="w-full lg:w-3/4 flex flex-col lg:flex-row justify-around gap-4 lg:gap-0 mt-4 lg:mt-4">
+                    <div class="flex flex-col gap-1">
+                        <div class="flex flex-row gap-2">
+                            <h3 class="mb-1 lg:mb-3 text-sm font-semibold uppercase">Starinc</h3>
+                            <img src="./dist/images/icon/Sort Up.svg" loading="lazy" alt="icon sort" id="arrow2" class="lg:hidden w-4 h-4 cursor-pointer rotate-180">
+                        </div>
+                        <div class="hidden lg:flex flex flex-col" id="menu2">
+                            <a href="index.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Home</a>
+                            <a href="shop.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Shop</a>
+                            <a href="about.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">About Us</a>
+                            <a href="contact.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Contact</a>
+                            <a href="faq.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">FAQ</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <div class="flex flex-row gap-2">
+                            <h3 class="mb-1 lg:mb-3 text-sm font-semibold uppercase">Policy</h3>
+                            <img src="./dist/images/icon/Sort Up.svg" loading="lazy" alt="icon sort" id="arrow3" class="lg:hidden w-4 h-4 cursor-pointer rotate-180">
+                        </div>
+                        <div class="hidden lg:flex flex flex-col" id="menu3">
+                            <a href="shipping.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Shipping</a>
+                            <a href="refund.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Refund</a>
+                            <a href="tos.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Terms of Service</a>
+                            <a href="privacy.html" rel="noopener noreferrer" class="text-xs font-light cursor-pointer">Privacy Policy</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <div class="flex flex-row gap-2">
+                            <h3 class="mb-1 lg:mb-3 text-sm font-semibold uppercase">Follow Us</h3>
+                            <img src="./dist/images/icon/Sort Up.svg" loading="lazy" alt="icon sort" id="arrow4" class="lg:hidden w-4 h-4 cursor-pointer rotate-180">
+                        </div>
+                        <div class="hidden lg:flex flex flex-col" id="menu4">
+                            <a href="https://www.instagram.com/starinc.official/" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+                                <img src="./dist/images/icon/Instagram.svg" alt="icon instagram" loading="lazy" class="w-3 h-3">
+                                <span class="text-xs font-light">Instagram</span>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=100083928816873" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+                                <img src="./dist/images/icon/Facebook.svg" alt="icon facebook" loading="lazy" class="w-3 h-3">
+                                <span class="text-xs font-light">Facebook</span>
+                            </a>
+                            <a href="https://www.tiktok.com/@starinc.official" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+                                <img src="./dist/images/icon/TikTok.svg" alt="icon tiktok" loading="lazy" class="w-3 h-3">
+                                <span class="text-xs font-light">Tiktok</span>
+                            </a>
+                            <a href="https://www.youtube.com/@starincofficial" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+                                <img src="./dist/images/icon/YouTube.svg" alt="icon youtube" loading="lazy" class="w-3 h-3">
+                                <span class="text-xs font-light">Youtube</span>
+                            </a>
+                            <a href="https://twitter.com/starincofficial" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+                                <img src="./dist/images/icon/TwitterX.svg" alt="icon twitter" loading="lazy" class="w-3 h-3">
+                                <span class="text-xs font-light">Twitter</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ornament footer -->
+            <div class="relative -bottom-60 lg:-bottom-44">
+                <div class="w-screen flex justify-center absolute">
+                    <div class="h-[50vh] w-[50vh] bg-pinkSecondary rounded-full"></div>
+                    <div class="h-[60vh] w-[60vh] bg-blueSecondary rounded-full"></div>
+                    <div class="h-[50vh] w-[50vh] bg-pinkSecondary rounded-full"></div>
+                    <div class="h-[60vh] w-[60vh] bg-blueSecondary rounded-full"></div>
+                    <div class="h-[50vh] w-[50vh] bg-pinkSecondary rounded-full"></div>
+                    <div class="h-[60vh] w-[60vh] bg-blueSecondary rounded-full"></div>
+                    <div class="h-[50vh] w-[50vh] bg-pinkSecondary rounded-full"></div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+
+        <!-- back to top start -->
+        <a href="#home" id="to-top" class="hidden h-9 w-9 rounded-full bg-gradient-primary border-2 border-white flex justify-center items-center fixed bottom-10 right-10 z-40 cursor-pointer animate-pulse" data-aos="fade-up">
+            <img src="./dist/images/icon/arrow-white.svg" loading="lazy" alt="icon to top" class="w-full h-full object-cover">
+        </a>
+        <!-- back to top end -->
+
+        <script src="dist/js/script.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                once: true,
+                duration: 500,
+            });
+        </script>
+    </body>
+</html>
