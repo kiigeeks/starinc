@@ -514,3 +514,30 @@ videoPlayer?.addEventListener('ended', function() {
         videoPlayer.play();
     }
 });
+
+
+// slider card product on index page
+const wrapperProduct = document.getElementById('wrapperProduct')
+const cardProductHome = document.querySelectorAll(".card-product-home")
+let tresholdCard = 0
+
+if (window.screen.width >= 1024 && window.screen.width < 1500) {
+    tresholdCard = 4
+} else if (window.screen.width >= 1500 && window.screen.width < 1800) {
+    tresholdCard = 5
+} else if (window.screen.width >= 1800  && window.screen.width < 2000) {
+    tresholdCard = 6
+} else if (window.screen.width >= 2000) {
+    tresholdCard = 7
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    console.log(cardProductHome.length);
+    if (cardProductHome.length > tresholdCard) {
+        wrapperProduct && wrapperProduct.classList.remove('md:justify-center')
+        wrapperProduct && wrapperProduct.classList.add('md:justify-start')
+    } else {
+        wrapperProduct && wrapperProduct.classList.add('md:justify-center')
+        wrapperProduct && wrapperProduct.classList.remove('md:justify-start')
+    }
+});

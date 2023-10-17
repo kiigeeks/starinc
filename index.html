@@ -10,6 +10,10 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link href="./dist/output.css" rel="stylesheet">
         <link rel="icon" href="./dist/images/icon/Starinc-Logomark.svg" />
+
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
         <meta name="description" content="Starinc Official" />
         <title>Starinc</title>
     </head>
@@ -130,34 +134,38 @@
             <!-- section product -->
             <section class="w-full flex flex-col mt-5">
                 <span class="text-2xl lg:text-4xl text-center text-gradient-primary font-bold tracking-[1.6px] uppercase mb-2 px-3 lg:px-0" data-aos="fade-up">starinc products</span>
-                <div class="w-full flex flex-row flex-nowrap justify-start md:justify-center gap-5 lg:gap-7 py-2 px-5 lg:px-0 mt-3 overflow-auto relative" data-aos="fade-up" data-aos-delay="50">
+                <div id="wrapperProduct" class="w-full flex flex-row flex-nowrap justify-start md:justify-center gap-5 lg:gap-7 py-2 px-5 lg:px-3 mt-3 overflow-auto relative" data-aos="fade-up" data-aos-delay="50">
                     <!-- card product -->
-                    <a href="product.html" rel="noopener noreferrer" class="h-40 lg:h-72 w-32 lg:w-64 bg-slate-300 rounded-[20px] shadow-md flex-shrink-0 relative">
+                    <a href="product.html" rel="noopener noreferrer" class="card-product-home h-64 lg:h-72 w-60 lg:w-64 bg-slate-300 rounded-[20px] shadow-md flex-shrink-0 relative">
                         <img src="./dist/images/products/Dream-Kissed.jpg" alt="product" loading="lazy" class="w-full h-full object-cover rounded-[20px]">
                         <div class="p-2 lg:p-3 absolute top-0">
-                            <img src="./dist/images/icon/favicon-starinc-white.svg" alt="icon starinc" loading="lazy" class="w-5 lg:w-7 h-5 lg:h-7">
+                            <img src="./dist/images/icon/favicon-starinc-white.svg" alt="icon starinc" loading="lazy" class="w-7 h-7">
                         </div>
-                        <div class="w-full bg-gradient-transparent rounded-b-[20px] flex flex-col justify-center items-center pb-2 pt-10 px-3 absolute bottom-0">
-                            <h5 class="text-xs font-normal capitalize">Dream Kissed</h5>
+                        <div class="w-full bg-gradient-transparent rounded-b-[20px] flex flex-col justify-start items-center pb-2 pt-10 px-1 md:px-3 absolute bottom-0">
+                            <h5 class="text-xs font-normal capitalize text-center">
+                                product STARINC Collastar Collagen Infusion Mixed Fruit ( 15 Sachets )
+                            </h5>
                             <span class="text-xxs font-extralight">Rp. 300.000,-</span>
                         </div>
                     </a>
                     <!-- card product -->
-                    <a href="product.html" rel="noopener noreferrer" class="h-40 lg:h-72 w-32 lg:w-64 bg-slate-300 rounded-[20px] shadow-md flex-shrink-0 relative">
+                    <a href="product.html" rel="noopener noreferrer" class="card-product-home h-64 lg:h-72 w-60 lg:w-64 bg-slate-300 rounded-[20px] shadow-md flex-shrink-0 relative">
                         <img src="./dist/images/products/Snow-Kissed.jpg" alt="product" loading="lazy" class="w-full h-full object-cover rounded-[20px]">
                         <div class="p-2 lg:p-3 absolute top-0">
-                            <img src="./dist/images/icon/favicon-starinc-white.svg" alt="icon starinc" loading="lazy" class="w-5 lg:w-7 h-5 lg:h-7">
+                            <img src="./dist/images/icon/favicon-starinc-white.svg" alt="icon starinc" loading="lazy" class="w-7 h-7">
                         </div>
-                        <div class="w-full bg-gradient-transparent rounded-b-[20px] flex flex-col justify-center items-center pb-2 pt-10 px-3 absolute bottom-0">
-                            <h5 class="text-xs font-normal capitalize">Snow Kissed</h5>
-                            <span class="text-xxs font-extralight">Rp. 300.000,-</span>
+                        <div class="w-full bg-gradient-transparent rounded-b-[20px] flex flex-col justify-start items-center pb-2 pt-10 px-3 absolute bottom-0">
+                            <h5 class="text-xs font-normal capitalize text-center">
+                                snow kissed
+                            </h5>
+                            <span class=" text-xxs font-extralight">Rp. 300.000,-</span>
                         </div>
                     </a>
                     <!-- card product -->
-                    <a href="product.html" rel="noopener noreferrer" class="h-40 lg:h-72 w-32 lg:w-64 bg-slate-300 rounded-[20px] shadow-md flex-shrink-0 relative">
+                    <a href="product.html" rel="noopener noreferrer" class="card-product-home h-64 lg:h-72 w-60 lg:w-64 bg-slate-300 rounded-[20px] shadow-md flex-shrink-0 relative">
                         <img src="./dist/images/products/Confidence-Burst.jpg" alt="product" loading="lazy" class="w-full h-full object-cover rounded-[20px]">
                         <div class="p-2 lg:p-3 absolute top-0">
-                            <img src="./dist/images/icon/favicon-starinc-white.svg" alt="icon starinc" loading="lazy" class="w-5 lg:w-7 h-5 lg:h-7">
+                            <img src="./dist/images/icon/favicon-starinc-white.svg" alt="icon starinc" loading="lazy" class="w-7 h-7">
                         </div>
                         <div class="w-full bg-gradient-transparent rounded-b-[20px] flex flex-col justify-center items-center pb-2 pt-10 px-3 absolute bottom-0">
                             <h5 class="text-xs font-normal capitalize">Confidence Burst</h5>
@@ -165,10 +173,32 @@
                         </div>
                     </a>
                     <!-- card product -->
-                    <a href="product.html" rel="noopener noreferrer" class="h-40 lg:h-72 w-32 lg:w-64 bg-slate-300 rounded-[20px] shadow-md flex-shrink-0 relative">
+                    <a href="product.html" rel="noopener noreferrer" class="card-product-home h-64 lg:h-72 w-60 lg:w-64 bg-slate-300 rounded-[20px] shadow-md flex-shrink-0 relative">
                         <img src="./dist/images/products/C-Star.jpg" alt="product" loading="lazy" class="w-full h-full object-cover rounded-[20px]">
                         <div class="p-2 lg:p-3 absolute top-0">
-                            <img src="./dist/images/icon/favicon-starinc-white.svg" alt="icon starinc" loading="lazy" class="w-5 lg:w-7 h-5 lg:h-7">
+                            <img src="./dist/images/icon/favicon-starinc-white.svg" alt="icon starinc" loading="lazy" class="w-7 h-7">
+                        </div>
+                        <div class="w-full bg-gradient-transparent rounded-b-[20px] flex flex-col justify-center items-center pb-2 pt-10 px-3 absolute bottom-0">
+                            <h5 class="text-xs font-normal capitalize">C-Star</h5>
+                            <span class="text-xxs font-extralight">Rp. 300.000,-</span>
+                        </div>
+                    </a>
+                    <!-- card product -->
+                    <a href="product.html" rel="noopener noreferrer" class="card-product-home h-64 lg:h-72 w-60 lg:w-64 bg-slate-300 rounded-[20px] shadow-md flex-shrink-0 relative">
+                        <img src="./dist/images/products/Confidence-Burst.jpg" alt="product" loading="lazy" class="w-full h-full object-cover rounded-[20px]">
+                        <div class="p-2 lg:p-3 absolute top-0">
+                            <img src="./dist/images/icon/favicon-starinc-white.svg" alt="icon starinc" loading="lazy" class="w-7 h-7">
+                        </div>
+                        <div class="w-full bg-gradient-transparent rounded-b-[20px] flex flex-col justify-center items-center pb-2 pt-10 px-3 absolute bottom-0">
+                            <h5 class="text-xs font-normal capitalize">Confidence Burst</h5>
+                            <span class="text-xxs font-extralight">Rp. 300.000,-</span>
+                        </div>
+                    </a>
+                    <!-- card product -->
+                    <a href="product.html" rel="noopener noreferrer" class="card-product-home h-64 lg:h-72 w-60 lg:w-64 bg-slate-300 rounded-[20px] shadow-md flex-shrink-0 relative">
+                        <img src="./dist/images/products/C-Star.jpg" alt="product" loading="lazy" class="w-full h-full object-cover rounded-[20px]">
+                        <div class="p-2 lg:p-3 absolute top-0">
+                            <img src="./dist/images/icon/favicon-starinc-white.svg" alt="icon starinc" loading="lazy" class="w-7 h-7">
                         </div>
                         <div class="w-full bg-gradient-transparent rounded-b-[20px] flex flex-col justify-center items-center pb-2 pt-10 px-3 absolute bottom-0">
                             <h5 class="text-xs font-normal capitalize">C-Star</h5>
@@ -253,152 +283,238 @@
                     <!-- testimonial -->
                     <div class="background-glasses flex flex-col justify-center items-center mt-14 py-5">
                         <h1 class="text-xl lg:text-4xl text-center text-gradient-primary font-bold tracking-[1.6px] uppercase mb-2 lg:mb-2 px-3 lg:px-0" data-aos="fade-up">Don’t Just Listen To Us</h1>
-                        <div class="w-full flex flex-row justify-start items-center gap-5 lg:gap-7 py-5 px-5 overflow-auto relative" id="slider" data-aos="fade-up" data-aos-delay="50">
-                            <!-- card testimonial -->
-                            <div class="slide w-[150px] lg:w-[180px] h-[250px] lg:h-[300px] background-testimonial-cards rounded-[20px] flex-shrink-0 flex flex-col py-2 cursor-pointer">
-                                <div class="h-[20%] flex flex-col justify-center items-center gap-2 mt-2 px-2 lg:px-3 py-1">
-                                    <div class="w-10 h-10 bg-transparent rounded-lg">
-                                        <img src="./dist/images/products/Dream-Kissed.png" loading="lazy" alt="produk" class="w-10 h-10 object-contain rounded-lg">
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper w-full">
+                            <div class="swiper-wrapper w-screen flex flex-row justify-start items-center py-5 px-5">
+                                <div class="swiper-slide w-[150px] lg:w-[180px] h-[250px] lg:h-[300px] background-testimonial-cards rounded-[20px] flex-shrink-0 flex flex-col py-2 cursor-pointer">
+                                    <div class="h-[20%] flex flex-col justify-center items-center gap-2 mt-2 px-2 lg:px-3 py-1">
+                                        <div class="w-10 h-10 bg-transparent rounded-lg">
+                                            <img src="./dist/images/products/Dream-Kissed.png" loading="lazy" alt="produk" class="w-10 h-10 object-contain rounded-lg">
+                                        </div>
+                                        <div class="flex flex-row justify-center items-center gap-1">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                        </div>
                                     </div>
-                                    <div class="flex flex-row justify-center items-center gap-1">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                    <div class="h-[70%] flex justify-center items-center px-[10px] lg:px-3 py-0 lg:py-3">
+                                        <p class="h-[75%] text-xxs lg:text-xs text-center font-light truncate-testimonial">
+                                            Lorem ipsum dolor sit amet consectetur. Sagittis vitae nulla risus non turpis porttitor. Sit pellentesque amet pellentesque in.
+                                        </p>
+                                    </div>
+                                    <div class="h-[10%] text-xxs lg:text-xs text-center font-light truncate px-3 py-1">
+                                        Jean
                                     </div>
                                 </div>
-                                <div class="h-[70%] flex justify-center items-center px-[10px] lg:px-3 py-0 lg:py-3">
-                                    <p class="text-xxs lg:text-xs text-center font-light truncate-testimonial">
-                                        Lorem ipsum dolor sit amet consectetur. Sagittis vitae nulla risus non turpis porttitor. Sit pellentesque amet pellentesque in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex soluta ea tempora veritatis itaque placeat, fugit necessitatibus doloremque, culpa recusandae enim magni consectetur perspiciatis, eaque nihil assumenda impedit cum aliquam.
-                                    </p>
+                                <div class="swiper-slide w-[150px] lg:w-[180px] h-[250px] lg:h-[300px] background-testimonial-cards rounded-[20px] flex-shrink-0 flex flex-col py-2 cursor-pointer">
+                                    <div class="h-[20%] flex flex-col justify-center items-center gap-2 mt-2 px-2 lg:px-3 py-1">
+                                        <div class="w-10 h-10 bg-transparent rounded-lg">
+                                            <img src="./dist/images/products/Dream-Kissed.png" loading="lazy" alt="produk" class="w-10 h-10 object-contain rounded-lg">
+                                        </div>
+                                        <div class="flex flex-row justify-center items-center gap-1">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                        </div>
+                                    </div>
+                                    <div class="h-[70%] flex justify-center items-center px-[10px] lg:px-3 py-0 lg:py-3">
+                                        <p class="h-[75%] text-xxs lg:text-xs text-center font-light truncate-testimonial">
+                                            Lorem ipsum dolor sit amet consectetur. Sagittis vitae nulla risus non turpis porttitor. Sit pellentesque amet pellentesque in.
+                                        </p>
+                                    </div>
+                                    <div class="h-[10%] text-xxs lg:text-xs text-center font-light truncate px-3 py-1">
+                                        Jean
+                                    </div>
                                 </div>
-                                <div class="h-[10%] text-xxs lg:text-xs text-center font-light truncate px-3 py-1">
-                                    Andre
+                                <div class="swiper-slide w-[150px] lg:w-[180px] h-[250px] lg:h-[300px] background-testimonial-cards rounded-[20px] flex-shrink-0 flex flex-col py-2 cursor-pointer">
+                                    <div class="h-[20%] flex flex-col justify-center items-center gap-2 mt-2 px-2 lg:px-3 py-1">
+                                        <div class="w-10 h-10 bg-transparent rounded-lg">
+                                            <img src="./dist/images/products/Dream-Kissed.png" loading="lazy" alt="produk" class="w-10 h-10 object-contain rounded-lg">
+                                        </div>
+                                        <div class="flex flex-row justify-center items-center gap-1">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                        </div>
+                                    </div>
+                                    <div class="h-[70%] flex justify-center items-center px-[10px] lg:px-3 py-0 lg:py-3">
+                                        <p class="h-[75%] text-xxs lg:text-xs text-center font-light truncate-testimonial">
+                                            Lorem ipsum dolor sit amet consectetur. Sagittis vitae nulla risus non turpis porttitor. Sit pellentesque amet pellentesque in.
+                                        </p>
+                                    </div>
+                                    <div class="h-[10%] text-xxs lg:text-xs text-center font-light truncate px-3 py-1">
+                                        Jean
+                                    </div>
+                                </div>
+                                <div class="swiper-slide w-[150px] lg:w-[180px] h-[250px] lg:h-[300px] background-testimonial-cards rounded-[20px] flex-shrink-0 flex flex-col py-2 cursor-pointer">
+                                    <div class="h-[20%] flex flex-col justify-center items-center gap-2 mt-2 px-2 lg:px-3 py-1">
+                                        <div class="w-10 h-10 bg-transparent rounded-lg">
+                                            <img src="./dist/images/products/Dream-Kissed.png" loading="lazy" alt="produk" class="w-10 h-10 object-contain rounded-lg">
+                                        </div>
+                                        <div class="flex flex-row justify-center items-center gap-1">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                        </div>
+                                    </div>
+                                    <div class="h-[70%] flex justify-center items-center px-[10px] lg:px-3 py-0 lg:py-3">
+                                        <p class="h-[75%] text-xxs lg:text-xs text-center font-light truncate-testimonial">
+                                            Lorem ipsum dolor sit amet consectetur. Sagittis vitae nulla risus non turpis porttitor. Sit pellentesque amet pellentesque in.
+                                        </p>
+                                    </div>
+                                    <div class="h-[10%] text-xxs lg:text-xs text-center font-light truncate px-3 py-1">
+                                        Jean
+                                    </div>
+                                </div>
+                                <div class="swiper-slide w-[150px] lg:w-[180px] h-[250px] lg:h-[300px] background-testimonial-cards rounded-[20px] flex-shrink-0 flex flex-col py-2 cursor-pointer">
+                                    <div class="h-[20%] flex flex-col justify-center items-center gap-2 mt-2 px-2 lg:px-3 py-1">
+                                        <div class="w-10 h-10 bg-transparent rounded-lg">
+                                            <img src="./dist/images/products/Dream-Kissed.png" loading="lazy" alt="produk" class="w-10 h-10 object-contain rounded-lg">
+                                        </div>
+                                        <div class="flex flex-row justify-center items-center gap-1">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                        </div>
+                                    </div>
+                                    <div class="h-[70%] flex justify-center items-center px-[10px] lg:px-3 py-0 lg:py-3">
+                                        <p class="h-[75%] text-xxs lg:text-xs text-center font-light truncate-testimonial">
+                                            Lorem ipsum dolor sit amet consectetur. Sagittis vitae nulla risus non turpis porttitor. Sit pellentesque amet pellentesque in.
+                                        </p>
+                                    </div>
+                                    <div class="h-[10%] text-xxs lg:text-xs text-center font-light truncate px-3 py-1">
+                                        Jean
+                                    </div>
+                                </div>
+                                <div class="swiper-slide w-[150px] lg:w-[180px] h-[250px] lg:h-[300px] background-testimonial-cards rounded-[20px] flex-shrink-0 flex flex-col py-2 cursor-pointer">
+                                    <div class="h-[20%] flex flex-col justify-center items-center gap-2 mt-2 px-2 lg:px-3 py-1">
+                                        <div class="w-10 h-10 bg-transparent rounded-lg">
+                                            <img src="./dist/images/products/Dream-Kissed.png" loading="lazy" alt="produk" class="w-10 h-10 object-contain rounded-lg">
+                                        </div>
+                                        <div class="flex flex-row justify-center items-center gap-1">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                        </div>
+                                    </div>
+                                    <div class="h-[70%] flex justify-center items-center px-[10px] lg:px-3 py-0 lg:py-3">
+                                        <p class="h-[75%] text-xxs lg:text-xs text-center font-light truncate-testimonial">
+                                            Lorem ipsum dolor sit amet consectetur. Sagittis vitae nulla risus non turpis porttitor. Sit pellentesque amet pellentesque in.
+                                        </p>
+                                    </div>
+                                    <div class="h-[10%] text-xxs lg:text-xs text-center font-light truncate px-3 py-1">
+                                        Jono
+                                    </div>
+                                </div>
+                                <div class="swiper-slide w-[150px] lg:w-[180px] h-[250px] lg:h-[300px] background-testimonial-cards rounded-[20px] flex-shrink-0 flex flex-col py-2 cursor-pointer">
+                                    <div class="h-[20%] flex flex-col justify-center items-center gap-2 mt-2 px-2 lg:px-3 py-1">
+                                        <div class="w-10 h-10 bg-transparent rounded-lg">
+                                            <img src="./dist/images/products/Dream-Kissed.png" loading="lazy" alt="produk" class="w-10 h-10 object-contain rounded-lg">
+                                        </div>
+                                        <div class="flex flex-row justify-center items-center gap-1">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                        </div>
+                                    </div>
+                                    <div class="h-[70%] flex justify-center items-center px-[10px] lg:px-3 py-0 lg:py-3">
+                                        <p class="h-[75%] text-xxs lg:text-xs text-center font-light truncate-testimonial">
+                                            Lorem ipsum dolor sit amet consectetur. Sagittis vitae nulla risus non turpis porttitor. Sit pellentesque amet pellentesque in.
+                                        </p>
+                                    </div>
+                                    <div class="h-[10%] text-xxs lg:text-xs text-center font-light truncate px-3 py-1">
+                                        Jean
+                                    </div>
+                                </div>
+                                <div class="swiper-slide w-[150px] lg:w-[180px] h-[250px] lg:h-[300px] background-testimonial-cards rounded-[20px] flex-shrink-0 flex flex-col py-2 cursor-pointer">
+                                    <div class="h-[20%] flex flex-col justify-center items-center gap-2 mt-2 px-2 lg:px-3 py-1">
+                                        <div class="w-10 h-10 bg-transparent rounded-lg">
+                                            <img src="./dist/images/products/Dream-Kissed.png" loading="lazy" alt="produk" class="w-10 h-10 object-contain rounded-lg">
+                                        </div>
+                                        <div class="flex flex-row justify-center items-center gap-1">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                        </div>
+                                    </div>
+                                    <div class="h-[70%] flex justify-center items-center px-[10px] lg:px-3 py-0 lg:py-3">
+                                        <p class="h-[75%] text-xxs lg:text-xs text-center font-light truncate-testimonial">
+                                            Lorem ipsum dolor sit amet consectetur. Sagittis vitae nulla risus non turpis porttitor. Sit pellentesque amet pellentesque in.
+                                        </p>
+                                    </div>
+                                    <div class="h-[10%] text-xxs lg:text-xs text-center font-light truncate px-3 py-1">
+                                        Jeany
+                                    </div>
+                                </div>
+                                <div class="swiper-slide w-[150px] lg:w-[180px] h-[250px] lg:h-[300px] background-testimonial-cards rounded-[20px] flex-shrink-0 flex flex-col py-2 cursor-pointer">
+                                    <div class="h-[20%] flex flex-col justify-center items-center gap-2 mt-2 px-2 lg:px-3 py-1">
+                                        <div class="w-10 h-10 bg-transparent rounded-lg">
+                                            <img src="./dist/images/products/Dream-Kissed.png" loading="lazy" alt="produk" class="w-10 h-10 object-contain rounded-lg">
+                                        </div>
+                                        <div class="flex flex-row justify-center items-center gap-1">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                        </div>
+                                    </div>
+                                    <div class="h-[70%] flex justify-center items-center px-[10px] lg:px-3 py-0 lg:py-3">
+                                        <p class="h-[75%] text-xxs lg:text-xs text-center font-light truncate-testimonial">
+                                            Lorem ipsum dolor sit amet consectetur. Sagittis vitae nulla risus non turpis porttitor. Sit pellentesque amet pellentesque in.
+                                        </p>
+                                    </div>
+                                    <div class="h-[10%] text-xxs lg:text-xs text-center font-light truncate px-3 py-1">
+                                        Jean
+                                    </div>
+                                </div>
+                                <div class="swiper-slide w-[150px] lg:w-[180px] h-[250px] lg:h-[300px] background-testimonial-cards rounded-[20px] flex-shrink-0 flex flex-col py-2 cursor-pointer">
+                                    <div class="h-[20%] flex flex-col justify-center items-center gap-2 mt-2 px-2 lg:px-3 py-1">
+                                        <div class="w-10 h-10 bg-transparent rounded-lg">
+                                            <img src="./dist/images/products/Dream-Kissed.png" loading="lazy" alt="produk" class="w-10 h-10 object-contain rounded-lg">
+                                        </div>
+                                        <div class="flex flex-row justify-center items-center gap-1">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                            <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
+                                        </div>
+                                    </div>
+                                    <div class="h-[70%] flex justify-center items-center px-[10px] lg:px-3 py-0 lg:py-3">
+                                        <p class="h-[75%] text-xxs lg:text-xs text-center font-light truncate-testimonial">
+                                            Lorem ipsum dolor sit amet consectetur. Sagittis vitae nulla risus non turpis porttitor. Sit pellentesque amet pellentesque in.
+                                        </p>
+                                    </div>
+                                    <div class="h-[10%] text-xxs lg:text-xs text-center font-light truncate px-3 py-1">
+                                        Ruby
+                                    </div>
                                 </div>
                             </div>
-                            <!-- card testimonial -->
-                            <div class="slide w-[150px] lg:w-[180px] h-[250px] lg:h-[300px] background-testimonial-cards rounded-[20px] flex-shrink-0 flex flex-col py-2 cursor-pointer">
-                                <div class="h-[20%] flex flex-col justify-center items-center gap-2 mt-2 px-2 lg:px-3 py-1">
-                                    <div class="w-10 h-10 bg-transparent rounded-lg">
-                                        <img src="./dist/images/products/C-Star.png" loading="lazy" alt="produk" class="w-10 h-10 object-contain rounded-lg">
-                                    </div>
-                                    <div class="flex flex-row justify-center items-center gap-1">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                    </div>
-                                </div>
-                                <div class="h-[70%] flex justify-center items-center px-[10px] lg:px-3 py-0 lg:py-3">
-                                    <p class="h-[75%] text-xxs lg:text-xs text-center font-light truncate-testimonial">
-                                        Lorem ipsum dolor sit amet consectetur. Viverra nulla eu aliquet ultricies rhoncus ornare faucibus tempus facilisis. Pharetra mauris tellus suspendisse maecenas pretium. Neque mollis maecenas vulputate diam nullam eu.
-                                    </p>
-                                </div>
-                                <div class="h-[10%] text-xxs lg:text-xs text-center font-light truncate px-3 py-1">
-                                    Julie
-                                </div>
-                            </div>
-                            <!-- card testimonial -->
-                            <div class="slide w-[150px] lg:w-[180px] h-[250px] lg:h-[300px] background-testimonial-cards rounded-[20px] flex-shrink-0 flex flex-col py-2 cursor-pointer">
-                                <div class="h-[20%] flex flex-col justify-center items-center gap-2 mt-2 px-2 lg:px-3 py-1">
-                                    <div class="w-10 h-10 bg-transparent rounded-lg">
-                                        <img src="./dist/images/products/Confidence-Burst.png" loading="lazy" alt="produk" class="w-10 h-10 object-contain rounded-lg">
-                                    </div>
-                                    <div class="flex flex-row justify-center items-center gap-1">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                    </div>
-                                </div>
-                                <div class="h-[70%] flex justify-center items-center px-[10px] lg:px-3 py-0 lg:py-3">
-                                    <p class="h-[75%] text-xxs lg:text-xs text-center font-light truncate-testimonial">
-                                        Lorem ipsum dolor sit amet consectetur. Condimentum morbi faucibus semper auctor turpis mauris integer est. Semper consequat at a nunc a sollicitudin consectetur est libero.
-                                    </p>
-                                </div>
-                                <div class="h-[10%] text-xxs lg:text-xs text-center font-light truncate px-3 py-1">
-                                    Steve
-                                </div>
-                            </div>
-                            <!-- card testimonial -->
-                            <div class="slide w-[150px] lg:w-[180px] h-[250px] lg:h-[300px] background-testimonial-cards rounded-[20px] flex-shrink-0 flex flex-col py-2 cursor-pointer">
-                                <div class="h-[20%] flex flex-col justify-center items-center gap-2 mt-2 px-2 lg:px-3 py-1">
-                                    <div class="w-10 h-10 bg-transparent rounded-lg">
-                                        <img src="./dist/images/products/Snow-Kissed.png" loading="lazy" alt="produk" class="w-10 h-10 object-contain rounded-lg">
-                                    </div>
-                                    <div class="flex flex-row justify-center items-center gap-1">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                    </div>
-                                </div>
-                                <div class="h-[70%] flex justify-center items-center px-[10px] lg:px-3 py-0 lg:py-3">
-                                    <p class="h-[75%] text-xxs lg:text-xs text-center font-light truncate-testimonial">
-                                        Lorem ipsum dolor sit amet consectetur. Eget vitae duis porttitor quis accumsan enim at venenatis.
-                                    </p>
-                                </div>
-                                <div class="h-[10%] text-xxs lg:text-xs text-center font-light truncate px-3 py-1">
-                                    Jessica
-                                </div>
-                            </div>
-                            <!-- card testimonial -->
-                            <div class="slide w-[150px] lg:w-[180px] h-[250px] lg:h-[300px] background-testimonial-cards rounded-[20px] flex-shrink-0 flex flex-col py-2 cursor-pointer">
-                                <div class="h-[20%] flex flex-col justify-center items-center gap-2 mt-2 px-2 lg:px-3 py-1">
-                                    <div class="w-10 h-10 bg-transparent rounded-lg">
-                                        <img src="./dist/images/products/Dream-Kissed.png" loading="lazy" alt="produk" class="w-10 h-10 object-contain rounded-lg">
-                                    </div>
-                                    <div class="flex flex-row justify-center items-center gap-1">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                    </div>
-                                </div>
-                                <div class="h-[70%] flex justify-center items-center px-[10px] lg:px-3 py-0 lg:py-3">
-                                    <p class="h-[75%] text-xxs lg:text-xs text-center font-light truncate-testimonial">
-                                        Lorem ipsum dolor sit amet consectetur. Sagittis vitae nulla risus non turpis porttitor. Sit pellentesque amet pellentesque in.
-                                    </p>
-                                </div>
-                                <div class="h-[10%] text-xxs lg:text-xs text-center font-light truncate px-3 py-1">
-                                    Jean
-                                </div>
-                            </div>
-                            <!-- card testimonial -->
-                            <div class="slide w-[150px] lg:w-[180px] h-[250px] lg:h-[300px] background-testimonial-cards rounded-[20px] flex-shrink-0 flex flex-col py-2 cursor-pointer">
-                                <div class="h-[20%] flex flex-col justify-center items-center gap-2 mt-2 px-2 lg:px-3 py-1">
-                                    <div class="w-10 h-10 bg-transparent rounded-lg">
-                                        <img src="./dist/images/products/C-Star.png" loading="lazy" alt="produk" class="w-10 h-10 object-contain rounded-lg">
-                                    </div>
-                                    <div class="flex flex-row justify-center items-center gap-1">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                        <img src="./dist/images/icon/Star.svg" alt="icon star" loading="lazy" class="w-3 h-3">
-                                    </div>
-                                </div>
-                                <div class="h-[70%] flex justify-center items-center px-[10px] lg:px-3 py-0 lg:py-3">
-                                    <p class="h-[75%] text-xxs lg:text-xs text-center font-light truncate-testimonial">
-                                        Lorem ipsum dolor sit amet consectetur. Condimentum morbi faucibus semper auctor turpis mauris integer est. Semper consequat at a nunc a sollicitudin consectetur est libero.
-                                    </p>
-                                </div>
-                                <div class="h-[10%] text-xxs lg:text-xs text-center font-light truncate px-3 py-1">
-                                    Steve
-                                </div>
-                            </div>
+                            <div class="swiper-pagination"></div>
                         </div>
                         
                         <div class="flex flex-row justify-between gap-3 mt-5" data-aos="fade-up">
-                            <button onclick="prevSlide()" class="h-8 w-8 bg-gradient-primary rounded-full cursor-pointer">
+                            <button class="swiper-prev h-8 w-8 bg-gradient-primary rounded-full cursor-pointer">
                                 <img src="./dist/images/icon/arrow-white.svg" loading="lazy" alt="icon arrow" class="text-white -rotate-90">
                             </button>
-                            <button onclick="nextSlide()" class="h-8 w-8 bg-gradient-primary rounded-full cursor-pointer">
+                            <button class="swiper-next h-8 w-8 bg-gradient-primary rounded-full cursor-pointer">
                                 <img src="./dist/images/icon/arrow-white.svg" loading="lazy" alt="icon arrow" class="text-white rotate-90">
                             </button>
                         </div>
@@ -409,22 +525,22 @@
                         <a href="center.html" rel="noopener noreferrer" class="bg-gradient-primary rounded-3xl flex flex-row justify-center items-center gap-2 px-8 py-2 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
                             <img src="./dist/images/icon/center.svg" alt="icon center" loading="lazy" class="w-7 h-7">
                             <div class="flex flex-col text-white">
-                                <h5 class="uppercase text-xs font-medium">Find Starcenter</h5>
-                                <span class="font-light text-xxs">Temukan Toko Terdekat</span>
+                                <h5 class="uppercase text-sm font-medium">Find Starcenter</h5>
+                                <span class="font-light text-xs">Temukan Toko Terdekat</span>
                             </div>
                         </a>
                         <a href="starpreneur.html" rel="noopener noreferrer" class="bg-gradient-primary rounded-3xl flex flex-row justify-center items-center gap-2 px-8 py-2 cursor-pointer" data-aos="fade-up" data-aos-delay="150">
                             <img src="./dist/images/icon/starpreneur.svg" alt="icon starpreneur" loading="lazy" class="w-7 h-7">
                             <div class="flex flex-col text-white">
-                                <h5 class="uppercase text-xs font-medium">BECOME STARPRENEUR</h5>
-                                <span class="font-light text-xxs">Jadilah Partner kami segera</span>
+                                <h5 class="uppercase text-sm font-medium">BECOME STARPRENEUR</h5>
+                                <span class="font-light text-xs">Jadilah Partner kami segera</span>
                             </div>
                         </a>
                         <a href="faq.html" rel="noopener noreferrer" class="bg-gradient-primary rounded-3xl flex flex-row justify-center items-center gap-2 px-8 py-2 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
                             <img src="./dist/images/icon/faq.svg" alt="icon faq" loading="lazy" class="w-7 h-7">
                             <div class="flex flex-col text-white">
-                                <h5 class="uppercase text-xs font-medium">faq</h5>
-                                <span class="font-light text-xxs">Menjawab semua pertanyaanmu</span>
+                                <h5 class="uppercase text-sm font-medium">faq</h5>
+                                <span class="font-light text-xs">Menjawab semua pertanyaanmu</span>
                             </div>
                         </a>
                     </div>
@@ -552,6 +668,27 @@
             AOS.init({
                 once: true,
                 duration: 500,
+            });
+        </script>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 7,
+                spaceBetween: 70,
+                loop: true,
+                rewind: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: ".swiper-next",
+                    prevEl: ".swiper-prev",
+                },
             });
         </script>
     </body>
