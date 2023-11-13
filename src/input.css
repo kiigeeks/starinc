@@ -14,7 +14,7 @@ html {
     }
 
     scroll-behavior: smooth;
-    scrollbar-width: none !important; 
+    scrollbar-width: none !important;
 
     /* menghilangkan scroll */
     * {

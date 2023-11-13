@@ -532,7 +532,6 @@ if (window.screen.width >= 1024 && window.screen.width < 1500) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log(cardProductHome.length);
     if (cardProductHome.length > tresholdCard) {
         wrapperProduct && wrapperProduct.classList.remove('md:justify-center')
         wrapperProduct && wrapperProduct.classList.add('md:justify-start')
@@ -540,4 +539,14 @@ document.addEventListener("DOMContentLoaded", () => {
         wrapperProduct && wrapperProduct.classList.add('md:justify-center')
         wrapperProduct && wrapperProduct.classList.remove('md:justify-start')
     }
+});
+
+
+wrapperProduct.addEventListener('wheel', function(e) {
+    const race = 40;
+    if (e.deltaY > 0)
+        wrapperProduct.scrollLeft += race;
+    else
+        wrapperProduct.scrollLeft -= race;
+	e.preventDefault();
 });
