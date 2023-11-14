@@ -571,6 +571,7 @@ wrapperProduct.addEventListener('mouseup', () => {
     isDown = false;
     wrapperProduct.classList.remove('active');
 });
+
 wrapperProduct.addEventListener('mousemove', (e) => {
     if(!isDown) return;
     e.preventDefault();
