@@ -541,12 +541,40 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// untuk scroll mouse
+// wrapperProduct.addEventListener('wheel', function(e) {
+//     const race = 40;
+//     if (e.deltaY > 0)
+//         wrapperProduct.scrollLeft += race;
+//     else
+//         wrapperProduct.scrollLeft -= race;
+// 	e.preventDefault();
+// });
 
-wrapperProduct.addEventListener('wheel', function(e) {
-    const race = 40;
-    if (e.deltaY > 0)
-        wrapperProduct.scrollLeft += race;
-    else
-        wrapperProduct.scrollLeft -= race;
-	e.preventDefault();
+let isDown = false;
+let startX;
+let scrollLeft;
+
+wrapperProduct.addEventListener('mousedown', (e) => {
+    isDown = true;
+    wrapperProduct.classList.add('active');
+    startX = e.pageX - wrapperProduct.offsetLeft;
+    scrollLeft = wrapperProduct.scrollLeft;
+});
+
+wrapperProduct.addEventListener('mouseleave', () => {
+    isDown = false;
+    wrapperProduct.classList.remove('active');
+});
+
+wrapperProduct.addEventListener('mouseup', () => {
+    isDown = false;
+    wrapperProduct.classList.remove('active');
+});
+wrapperProduct.addEventListener('mousemove', (e) => {
+    if(!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - wrapperProduct.offsetLeft;
+    const walk = (x - startX) * 1; //scroll-fast
+    wrapperProduct.scrollLeft = scrollLeft - walk;
 });
